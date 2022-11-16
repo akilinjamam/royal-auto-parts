@@ -7,15 +7,15 @@ import logo from '../../../top-trending/royal-auto-parts.png';
 import './Navbar.css'
 
 const Navbar = () => {
-    // const [user] = useAuthState(auth)
-    // console.log(user)
-    // const navigate = useNavigate()
+    const [user] = useAuthState(auth)
+    console.log(user)
+    const navigate = useNavigate()
 
-    // const handleSignOut = () => {
-    //     signOut(auth)
-    //     navigate('/login');
-    //     localStorage.removeItem('accessToken')
-    // }
+    const handleSignOut = () => {
+        signOut(auth)
+        navigate('/login');
+        localStorage.removeItem('accessToken')
+    }
     return (
         <div className=' mx-auto'>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
                             <li><Link to='/myPortfolio'>My Portfolio</Link></li>
 
 
-                            {/* 
+
                             {
                                 user && <li><Link to='/dashboard'>Dashboard</Link></li>
                             }
@@ -41,7 +41,7 @@ const Navbar = () => {
 
                             {
                                 user && <li><p>{user.displayName}</p></li>
-                            } */}
+                            }
 
 
                         </ul>
@@ -54,7 +54,7 @@ const Navbar = () => {
                         <li><Link to='/myPortfolio'>My Portfolio</Link></li>
                         <li><Link to='/blog'>Blogs</Link></li>
 
-                        {/* {
+                        {
                             user && <li><Link to='/dashboard'>Dashboard</Link></li>
                         }
 
@@ -64,7 +64,7 @@ const Navbar = () => {
 
                         {
                             user && <li> <img className='w-2/4 ' src={user.photoURL} alt="" /> </li>
-                        } */}
+                        }
 
 
                     </ul>

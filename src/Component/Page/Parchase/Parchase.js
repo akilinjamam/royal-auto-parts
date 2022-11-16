@@ -15,7 +15,7 @@ const Purchase = () => {
 
     const { purchaseId } = useParams()
 
-    // const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth)
 
     const [purchase, setPurchase] = useState([]);
 
@@ -57,8 +57,7 @@ const Purchase = () => {
         const orders = {
 
             partsName: name,
-            // userName: user.displayName,
-            // userEmail: user.email,
+            userEmail: user.email,
             orderQuantity: newparsedQuantity,
             pricePerUnit: pricePerUnit,
             address: address,
