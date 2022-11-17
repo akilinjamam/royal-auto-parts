@@ -6,12 +6,12 @@ import MustNeed from './MustNeed/MustNeed';
 import Reviews from './Reviews/Reviews';
 import Tools from './Tools/Tools';
 import TopTranding from './TopTranding/TopTranding';
-
+import BannerComponents from './Banner/BannerComponents';
 const Home = () => {
     return (
-        <div>
-
-            <Banner></Banner>
+        <div >
+            {/* <Banner></Banner> */}
+            <BannerComponents></BannerComponents>
             <Tools></Tools>
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>

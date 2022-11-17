@@ -26,10 +26,11 @@ import NotFound from './Component/Page/NotFound/NotFound';
 import Blog from './Component/Page/Blog/Blog';
 import MyPortfolio from './Component/Page/MyPortfolio/MyPortfolio';
 import UpdateProduct from './Component/Page/DashBorard/UpdateProduct';
+import background from './background-image/car-background.png'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>

@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  /* background: url(./background-image/car-background.png) fixed center; */
+  background-image: url(./background-image/car-background\ \(2\).png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
 }
 
 .App-logo {

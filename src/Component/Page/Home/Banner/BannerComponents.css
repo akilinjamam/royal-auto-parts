@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+
+.theFonts {
+    font-family: 'Yeseva One', cursive;
+}
+
+.color {
+    color: red;
+
+}
+
+.size {
+    font-size: 50px;
+}
+
+.theButton {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.theButton:hover {
+    background-color: red;
+    color: white;
+    transition: .5s ease-in-out;
+}

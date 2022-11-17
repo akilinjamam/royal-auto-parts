@@ -1,20 +1,18 @@
 import React from 'react';
+import background from '../../../../background-image/background-img.png'
+import parts1 from '../../../../background-image/car-parts-1.png'
+import parts2 from '../../../../background-image/car-parts-2.png'
+import parts3 from '../../../../background-image/car-parts-3.png'
+import parts4 from '../../../../background-image/banner-vactor-img-1.png'
 
 
 const Banner = () => {
     return (
-        <div>
 
-            <div class="hero min-h-screen" style={{ backgroundImage: ' url(https://api.lorem.space/image/car?w=800&h=200&hash=500B67FB)' }}>
-                <div class="hero-overlay bg-opacity-60"></div>
-                <div class="hero-content text-center text-neutral-content">
-                    <div class="max-w-md">
-                        <h1 class="mb-5 text-5xl font-bold">Hello there. this is Injamam</h1>
-                        <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
 
-                    </div>
-                </div>
-            </div>
+        <div >
+
+            {/* style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'right', height: '650px', backgroundRepeat: 'no-repeat', position: 'fixed', top: '0' }} */}
         </div>
     );
 };
