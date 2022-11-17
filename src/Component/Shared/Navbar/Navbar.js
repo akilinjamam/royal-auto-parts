@@ -59,7 +59,7 @@ const Navbar = () => {
                         }
 
                         {
-                            user ? <li className='hover:text-red-700' onClick={handleSignOut}> <p>Log Out</p></li> : <li><Link to='/login'>Login</Link></li>
+                            user ? <li className='hover:text-red-700' onClick={handleSignOut}> <p>Log Out</p></li> : <li className='hover:text-red-700'><Link to='/login'>Login</Link></li>
                         }
 
                         {
