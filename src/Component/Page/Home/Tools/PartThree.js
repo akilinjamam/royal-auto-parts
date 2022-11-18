@@ -31,6 +31,11 @@ const PartThree = ({ part }) => {
                         <p>Available: {availableQuantity} </p>
                         <p>Price: {pricePerUnit} </p>
                     </div>
+                    <br />
+
+                    <div data-aos='fade-right' data-aos-duration='1000'>
+                        <button style={{ marginLeft: '350px' }} className='theButton '> View All Parts </button>
+                    </div>
                 </div>
             </div>
 

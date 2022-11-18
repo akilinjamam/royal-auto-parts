@@ -11,3 +11,11 @@
     background-size: cover;
     height: 100vh;
 }
+
+
+.background-modification-three {
+    background-image: url(../../../../background-image/car-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

@@ -6,6 +6,7 @@ import Loading from '../../Shared/Navbar/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useToken from '../../Shared/useToken';
+import loginImage from '../../../background-image/login-img.png'
 
 
 
@@ -72,23 +73,24 @@ const Login = () => {
     return (
 
         <div className='flex justify-center items-center h-screen'>
+            <div data-aos='zoom-in' data-aos-duration='1000'>
+                <img className='w-3/4' src={loginImage} alt="" />
+            </div>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div data-aos='fade-left' data-aos-duration='1000' className=" w-96  shadow-xl">
                 <div className="card-body">
-                    <p className='text-2xl text-primary'>Login</p>
+                    <p className='text-2xl color text-left'>Login Form</p>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
 
-
+                        <br />
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Email</span>
 
-                            </label>
                             <input
                                 type="email"
                                 placeholder="Type Email"
-                                className="input input-bordered w-full max-w-xs"
+                                className=""
+                                style={{ background: 'none', border: '1px solid red', padding: '10px', borderRadius: '10px', color: 'lightgray' }}
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -111,14 +113,12 @@ const Login = () => {
 
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Password</span>
 
-                            </label>
                             <input
                                 type="password"
                                 placeholder="Type Password"
-                                className="input input-bordered w-full max-w-xs"
+                                className=""
+                                style={{ background: 'none', border: '1px solid red', padding: '10px', borderRadius: '10px', color: 'lightgray' }}
                                 {...register("password", {
                                     required: {
                                         value: true,
@@ -139,16 +139,23 @@ const Login = () => {
                             </label>
                         </div>
                         {showError}
-                        <input className='btn btn-primary w-full max-w-xs' type="submit" value="login" />
+                        <div className='flex justify-between items-center '>
+                            <input
+                                className="theButton w-24 "
+                                type="submit"
+                                value="Login" />
 
+                            <span className='text-gray-400'>OR</span>
 
-                        <p>New to Account in Doctors portal ? <Link className='text-primary' to='/signup'>signup</Link> </p>
+                            <button className="theButton " onClick={handleSignInWithGoogle}>Sign In With Google</button>
+                        </div>
+
+                        <br />
+                        <button className='text-gray-400'>New to Account in Royal Auto Parts ? <Link className='text-red-600' to='/signup'>signup</Link> </button>
 
                     </form>
-                    <div className="divider">OR</div>
-                    <div className="card-actions justify-center">
-                        <button onClick={handleSignInWithGoogle} className="btn btn-accent">Sign In With Google</button>
-                    </div>
+
+
                 </div>
             </div>
 

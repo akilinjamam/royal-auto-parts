@@ -4,6 +4,7 @@ import PartThree from './PartThree';
 import PartTwo from './PartTwo';
 import './Tools.css'
 
+
 const Tools = () => {
 
     const [parts, setParts] = useState([])
@@ -26,6 +27,7 @@ const Tools = () => {
 
     return (
         <div>
+
             <div className='background-modification'>
                 <br />
                 <div className='lg:w-5/6 mx-auto'>
@@ -43,6 +45,7 @@ const Tools = () => {
                     }
                 </div>
             </div>
+
             <div>
                 {
                     partTwo.map(p => <PartTwo part={p} key={p._id}></PartTwo>)

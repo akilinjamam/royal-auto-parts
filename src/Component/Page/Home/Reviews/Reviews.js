@@ -3,7 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import auth from '../../../../firebase.init';
 import Loading from '../../../Shared/Navbar/Loading/Loading';
-import defultImage from '../../../../top-trending/car-bulb.png';
+import defultImage from '../../../../background-image/default-image.png';
 import noReviews from '../../../../top-trending/NO-REVIEWS.png'
 
 
@@ -31,27 +31,29 @@ const Reviews = () => {
 
 
     return (
-        <div className='lg:w-5/6 mx-auto'>
+        <div className='lg:w-full mx-auto'>
             <br /><br />
-            <h2 className='text-4xl font-bold text-left'>ALL REVIEWS</h2>
+            <h2 data-aos='fade-up' data-aos-duration='1000' className='text-4xl font-bold color theFonts'>All Reviews</h2>
             <br /><br />
-            <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10'>
-
+            <div >
+                {/* className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10' */}
                 {
-                    reviews.map(review => <div key={review._id}>
+                    reviews.map(review => <div key={review._id} data-aos='flip-up' data-aos-duration='600' className='m-16 border border-red-700 rounded-lg p-3 w-2/3 mx-auto flex items-center' >
+                        {/* style={{ width: '90px' }} */}
+                        {/*  */}
+                        <div data-aos='zoom-in' data-aos-duration='1000' >
+                            <img style={{ borderRadius: '50px', border: '3px solid purple' }} src={review.img === null ? defultImage : review.img} alt="Shoes" />
+                        </div>
 
-                        <div class="card w-96 bg-purple-700 text-primary-content text-left ">
-
-
-                            <div style={{ zIndex: '5' }} class="card w-96 bg-base-100 shadow-xl image-full">
-                                <figure><img src={review.img === null ? defultImage : review.img} alt="Shoes" /></figure>
-                                <div class="card-body">
-
-                                    <h2 class="card-title text-white">{review.description}</h2>
-                                    <p className='text-green-400 text-xl font-bold'>{review.name}</p>
-                                    <p className='text-white'>Ratings: <span className='text-yellow-300 font-bold'>{review.rating}</span> </p>
-
-                                </div>
+                        <div className='text-left ml-7 text-gray-300'>
+                            <div data-aos='fade-left' data-aos-duration='1200'>
+                                <p>{review.name}</p>
+                            </div>
+                            <div data-aos='fade-left' data-aos-duration='1400'>
+                                <p>{review.description}</p>
+                            </div>
+                            <div data-aos='fade-left' data-aos-duration='1600'>
+                                <p>Rating: {review.rating}</p>
                             </div>
                         </div>
 
@@ -70,3 +72,26 @@ const Reviews = () => {
 };
 
 export default Reviews;
+
+
+
+/* 
+
+ <div class="card w-96 bg-purple-700 text-primary-content text-left ">
+
+
+                            <div style={{ zIndex: '5' }} class="card w-96 bg-base-100 shadow-xl image-full">
+                                <figure><img src={review.img === null ? defultImage : review.img} alt="Shoes" /></figure>
+                                <div class="card-body">
+
+                                    <h2 class="card-title text-white">{review.description}</h2>
+                                    <p className='text-green-400 text-xl font-bold'>{review.name}</p>
+                                    <p className='text-white'>Ratings: <span className='text-yellow-300 font-bold'>{review.rating}</span> </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+*/

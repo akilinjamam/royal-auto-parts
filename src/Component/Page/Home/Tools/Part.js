@@ -1,6 +1,8 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 import { Link, useNavigate } from 'react-router-dom';
 import './part.css'
+
 
 const Part = ({ part }) => {
 
@@ -15,6 +17,7 @@ const Part = ({ part }) => {
 
     }
     return (
+
         <div>
 
             <div className='flex w-5/6 mx-auto mt-16 justify-between  items-center'  >
@@ -40,6 +43,7 @@ const Part = ({ part }) => {
             </div>
 
         </div>
+
     );
 };
 

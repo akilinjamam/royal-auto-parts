@@ -9,6 +9,8 @@ import auth from '../../../firebase.init';
 import Loading from '../../Shared/Navbar/Loading/Loading';
 import useToken from '../../Shared/useToken';
 
+import signup from '../../../background-image/signup-form-img.png'
+
 
 const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -64,23 +66,26 @@ const SignUp = () => {
 
         <div className='flex justify-center items-center h-screen'>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
 
-                <div className="card-body">
+            <div data-aos='zoom-in' data-aos-duration='1000'>
+                <img className='w-3/4' src={signup} alt="" />
+            </div>
 
-                    <p className='text-2xl text-primary'>Sign Up</p>
+            <div data-aos='fade-left' data-aos-duration='1000' className="">
 
+                <div className="">
+
+                    <p className='text-2xl color text-left'>SignUp Form</p>
+                    <br />
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Name</span>
 
-                            </label>
                             <input
                                 type="name"
                                 placeholder="Type name"
-                                className="input input-bordered w-full max-w-xs"
+                                className=""
+                                style={{ background: 'none', border: '1px solid red', padding: '10px', borderRadius: '10px', color: 'lightgray' }}
                                 {...register("name", {
                                     required: {
                                         value: true,
@@ -99,14 +104,12 @@ const SignUp = () => {
 
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Email</span>
 
-                            </label>
                             <input
                                 type="email"
                                 placeholder="Type Email"
-                                className="input input-bordered w-full max-w-xs"
+                                className=""
+                                style={{ background: 'none', border: '1px solid red', padding: '10px', borderRadius: '10px', color: 'lightgray' }}
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -129,14 +132,12 @@ const SignUp = () => {
 
 
                         <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Password</span>
 
-                            </label>
                             <input
                                 type="password"
                                 placeholder="Type Password"
-                                className="input input-bordered w-full max-w-xs"
+                                className=""
+                                style={{ background: 'none', border: '1px solid red', padding: '10px', borderRadius: '10px', color: 'lightgray' }}
                                 {...register("password", {
                                     required: {
                                         value: true,
@@ -157,16 +158,23 @@ const SignUp = () => {
                             </label>
                         </div>
                         {showError}
-                        <input className='btn btn-primary w-full max-w-xs' type="submit" value="signup" />
+                        <div className='flex justify-between items-center '>
+                            <input
+                                className="theButton w-22 "
+                                type="submit"
+                                value="Signup" />
 
-                        <p>Have an Account in Doctors portal ? <Link className='text-primary' to='/login'>Login</Link> </p>
+                            <span className='text-gray-400'>OR</span>
+
+                            <button className="theButton mr-4" onClick={handleSignInWithGoogle}>Sign In With Google</button>
+                        </div>
+
+                        <br />
+                        <button className='text-gray-400'>Already has Account in Royal Auto Parts ? <Link className='text-red-600' to='/Login'>Login</Link> </button>
 
 
                     </form>
-                    <div className="divider">OR</div>
-                    <div className="card-actions justify-center">
-                        <button onClick={handleSignInWithGoogle} className="btn btn-accent">Sign In With Google</button>
-                    </div>
+
                 </div>
             </div>
 
