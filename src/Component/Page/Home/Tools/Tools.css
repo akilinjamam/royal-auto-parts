@@ -1,0 +1,13 @@
+.background-modification {
+    background-image: url(../../../../background-image/rolls-royes-black-blur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.background-modification-two {
+    background-image: url(../../../../background-image/background-car-two.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

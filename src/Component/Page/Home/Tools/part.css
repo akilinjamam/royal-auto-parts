@@ -1,0 +1,14 @@
+.image-part {
+    width: 350px;
+
+}
+
+.image-part img {
+    border-radius: 10px;
+}
+
+.detail-part {
+    text-align: left;
+    width: 500px;
+    color: lightgray;
+}

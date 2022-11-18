@@ -5,7 +5,7 @@ const BannerComponents = () => {
     return (
         <div style={{ width: '90%', margin: 'auto' }}>
             <div style={{
-                height: '600px', display: 'flex', alignItems: 'center',
+                height: '100vh', display: 'flex', alignItems: 'center',
                 justifyContent: 'space-between'
             }} >
                 <div data-aos='zoom-in' data-aos-duration='1500' style={{ widht: '400px' }}>
