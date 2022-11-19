@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PartThree = ({ part }) => {
+
+    const navigate = useNavigate()
+
+    const handlePurchase = (id) => {
+
+        navigate(`/purchase/${id}`)
+    }
 
     const { _id, img, name, description, minOrderQuantity, availableQuantity, pricePerUnit
     } = part
@@ -33,8 +41,15 @@ const PartThree = ({ part }) => {
                     </div>
                     <br />
 
-                    <div data-aos='fade-right' data-aos-duration='1000'>
-                        <button style={{ marginLeft: '350px' }} className='theButton '> View All Parts </button>
+                    <div className='flex items-center justify-between'>
+                        <div data-aos='zoom-in' data-aos-duration='800'>
+                            <button onClick={() => handlePurchase(_id)} className="theButton ">Purchase</button>
+
+                        </div>
+
+                        <div data-aos='fade-right' data-aos-duration='1000'>
+                            <button className='theButton '> View All Parts </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,8 @@ import Blog from './Component/Page/Blog/Blog';
 import MyPortfolio from './Component/Page/MyPortfolio/MyPortfolio';
 import UpdateProduct from './Component/Page/DashBorard/UpdateProduct';
 import background from './background-image/car-background.png'
+import AvaiablePurchase from './Component/Page/Parchase/AvaiablePurchase';
+import ViewReviews from './Component/Page/Home/Reviews/ViewReviews';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='/home' element={<Home></Home>} ></Route>
+        <Route path='/availablePurchase' element={<AvaiablePurchase></AvaiablePurchase>} ></Route>
+        <Route path='/viewReviews' element={<ViewReviews></ViewReviews>} ></Route>
         <Route path='/purchase/:purchaseId' element={<RequireAuth><Parchase></Parchase></RequireAuth>} ></Route>
         <Route path='/login' element={<Login></Login>} ></Route>
         <Route path='/signup' element={<SignUp></SignUp>} ></Route>

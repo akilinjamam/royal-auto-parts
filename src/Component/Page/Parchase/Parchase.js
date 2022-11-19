@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Navbar/Loading/Loading';
 import '../../Shared/Navbar/Navbar.css'
 
 const Purchase = () => {
@@ -23,6 +24,8 @@ const Purchase = () => {
 
     const { minOrderQuantity, img, availableQuantity, pricePerUnit, name, description } = purchase
 
+
+
     const minParsedQuantity = parseInt(purchase.minOrderQuantity)
     const availableParsedQuantity = parseInt(availableQuantity)
 
@@ -36,6 +39,11 @@ const Purchase = () => {
             .then(res => res.json())
             .then(data => setPurchase(data))
     }, [])
+
+    if (!img) {
+
+        return <Loading></Loading>
+    }
 
 
     const handleQuantityChange = (event) => {
@@ -99,30 +107,39 @@ const Purchase = () => {
 
 
     return (
-        <div className='w-3/3 mx-auto'>
+        <div className='w-2/3 mx-auto'>
             <br />
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content text-left flex-col lg:flex-row border border-gray-500">
-                    <img src={img} class="max-w-xl  rounded-lg shadow-2xl img-cntrl" alt='' />
+            <div class="hero min-h-screen ">
+                <div data-aos='zoom-in' data-aos-duration='1000' class="hero-content text-left flex-col lg:flex-row  ">
+
+                    <img style={{ width: '400px' }} src={img} class=" rounded-lg  " alt='' />
+
                     <div>
 
 
 
                         <form onSubmit={handleQuantity} action="">
-                            <h1 class="text-3xl font-bold ">{name}</h1>
-                            <h1 class="text-sm font-bold ">{description}</h1>
+                            <h1 class="text-3xl text-white font-bold ml-4 ">{name}</h1>
                             <br />
-                            <div className='border border-gray-400 rounded-lg p-4'>
+                            <h1 class="text-sm text-white font-bold ml-4  ">{description}</h1>
+
+                            <div className=' p-4'>
                                 {/* <p class="py-1">Your Name : {user.displayName} </p>
                                 <p class="py-1">Your Email : {user.email} </p> */}
-                                <p class="py-1">Minimum order : {minOrderQuantity}</p>
-                                <input type="number" name="quantity" placeholder='Type Order Quantity' id="" onChange={handleQuantityChange} required />
-                                {showErrorMessage}
-                                <br /><br />
-                                <p class="py-1">Available order : {availableQuantity} </p>
-                                <p class="py-1">Price per Unit : {pricePerUnit} </p><br />
-                                <input type="text" name="address" placeholder='Type address' id="" required /><br /><br />
-                                <input type="number" name="phone" placeholder='Type phone' id="" required /><br /><br />
+                                <p class="py-1 text-white">Available order : {availableQuantity} </p>
+                                <p class="py-1 text-white">Minimum order : {minOrderQuantity}</p>
+                                <p class="py-1 text-white">Price per Unit : {pricePerUnit} </p><br />
+
+                                <div className='flex items-center mb-12 '>
+                                    <div>
+                                        <input style={{ background: 'none', border: '1px solid red' }} className='mr-12  p-2 rounded' type="number" name="quantity" placeholder='Type Order Quantity' id="" onChange={handleQuantityChange} required />
+
+                                        {showErrorMessage}
+                                    </div>
+
+                                    <input style={{ background: 'none', border: '1px solid red' }} className='mr-12  p-2 rounded' type="text" name="address" placeholder='Type address' id="" required />
+                                    <input style={{ background: 'none', border: '1px solid red' }} className=' p-2 rounded' type="number" name="phone" placeholder='Type phone' id="" required />
+                                </div>
                                 <input disabled={newparsedQuantity < minParsedQuantity || newparsedQuantity > availableParsedQuantity} class="btn btn-sm" type="submit" value=" place Order" />
                             </div>
                         </form>

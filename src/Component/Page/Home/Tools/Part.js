@@ -39,6 +39,10 @@ const Part = ({ part }) => {
                         <p>Available: {availableQuantity} </p>
                         <p>Price: {pricePerUnit} </p>
                     </div>
+                    <br />
+                    <div data-aos='fade-left' data-aos-duration='1700'>
+                        <button onClick={() => handlePurchase(_id)} className="theButton ">Purchase</button>
+                    </div>
                 </div>
             </div>
 

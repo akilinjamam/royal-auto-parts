@@ -1,8 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PartTwo = ({ part }) => {
     const { _id, img, name, description, minOrderQuantity, availableQuantity, pricePerUnit
     } = part
+
+    const navigate = useNavigate()
+
+    const handlePurchase = (id) => {
+
+        navigate(`/purchase/${id}`)
+    }
     return (
         <div>
             <div style={{ height: '100vh' }} className='flex w-5/6 mx-auto mt-16 justify-between  items-center'  >
@@ -21,6 +29,10 @@ const PartTwo = ({ part }) => {
                         <p>Minimum Order: {minOrderQuantity} </p>
                         <p>Available: {availableQuantity} </p>
                         <p>Price: {pricePerUnit} </p>
+                    </div>
+                    <br />
+                    <div data-aos='fade-left' data-aos-duration='1700'>
+                        <button onClick={() => handlePurchase(_id)} className="theButton ">Purchase</button>
                     </div>
                 </div>
 
