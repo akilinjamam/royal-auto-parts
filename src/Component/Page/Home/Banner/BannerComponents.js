@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import background from '../../../../background-image/banner-vactor-img-1.png'
 import './BannerComponents.css'
 const BannerComponents = () => {
@@ -22,7 +23,7 @@ const BannerComponents = () => {
                     </div>
                     <br />
                     <div data-aos='fade-left' data-aos-duration='3000'>
-                        <button className='theButton'>View All Available Parts</button>
+                        <button className='theButton'><Link to='/availablePurchase'>View All Available Parts</Link></button>
                     </div>
                 </div>
             </div>

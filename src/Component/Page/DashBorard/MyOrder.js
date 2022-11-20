@@ -1,9 +1,11 @@
 import { signOut } from 'firebase/auth';
+import './MyOrder.css'
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Navbar/Loading/Loading';
 
 import DeleteUser from './DeleteUser';
 
@@ -43,15 +45,123 @@ const MyOrder = () => {
     }, [user])
 
 
+    if (!myOrders) {
+        return <Loading></Loading>
+    }
+
+
 
     return (
 
 
-        <div>
+        <div >
             <br />
-            <div>
+            {
+                myOrders.map((order, index) =>
 
-                <div className="overflow-x-auto">
+                    <div className='border-b-2 border-red-600 pb-5 pt-5'>
+                        <div className='flex text-left justify-between text-white'>
+                            {/* div one */}
+                            <div style={{ width: '' }}>
+                                <p>Order No: {index + 1}</p>
+                                <p>Name: {order.userName}</p>
+                                <p>Email: {order.userEmail}</p>
+                                <p>Parts Name: {order.partsName}</p>
+                                <p>Address: {order.address} </p>
+                            </div>
+
+                            {/* div two */}
+                            <div style={{ width: '' }}>
+
+                                <p>Phone: {order.phone} </p>
+                                <br />
+                                <p>Order Quantity: {order.orderQuantity} </p>
+                                <p>Price Per Unit: {order.pricePerUnit} </p>
+                                <p>payment Status: {order?.transactionId ? <p>Paid</p> : <p>Not Paid</p>} </p>
+                            </div>
+                            {/* div three */}
+
+                            <div style={{ width: '350px' }}>
+                                {
+                                    order?.transactionId && <p> Transaction ID: {order.transactionId} </p>
+                                }
+
+                                {
+                                    order?.status && <p>Order Status: {order.status} </p>
+                                }
+                            </div>
+
+
+                        </div>
+                        <br />
+                        <div className='flex text-white'>
+                            <div className='text-left'>
+                                {order?.transactionId ? <button disabled className='btn btn-xs text-white'>Delete Order</button> : <label onClick={() => setDeleteUsers(order)} for="delete-user" class="btn btn-xs" >Delete Order</label>}
+
+                                {/* Modal for deleting Order */}
+                                {
+                                    deleteUsers && <DeleteUser deleteUsers={deleteUsers} setDeleteUsers={setDeleteUsers}></DeleteUser>
+                                }
+                            </div>
+
+                            <div className='ml-10'>
+                                {order?.transactionId ? <p class="btn btn-xs cursor-not-allowed">paid</p> : <Link to={`/dashboard/payment/${order._id}`}><button class="btn btn-xs">payment</button></Link>}
+                            </div>
+                        </div>
+
+                    </div>
+
+                )
+            }
+        </div>
+    );
+};
+
+export default MyOrder;
+
+
+/* 
+
+  useEffect(() => {
+        if (user) {
+            const email = user?.email
+            fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    setMyOrders(data)
+                })
+        }
+    }, [user])
+
+
+
+     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`, {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+            'authorization': `Bearer ${localStorage.getItem('accessToken')} `
+
+        }
+    }).then(res => res.json()))
+
+
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+
+
+
+*/
+
+
+
+
+/* 
+
+<div className="overflow-x-auto">
                     <table className="table w-full">
 
                         <thead>
@@ -117,46 +227,6 @@ const MyOrder = () => {
                         </tbody>
                     </table>
                 </div>
-
-            </div>
-        </div>
-    );
-};
-
-export default MyOrder;
-
-
-/* 
-
-  useEffect(() => {
-        if (user) {
-            const email = user?.email
-            fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`)
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    setMyOrders(data)
-                })
-        }
-    }, [user])
-
-
-
-     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`, {
-        method: 'GET',
-        headers: {
-            'content-type': 'application/json',
-            'authorization': `Bearer ${localStorage.getItem('accessToken')} `
-
-        }
-    }).then(res => res.json()))
-
-
-
-    if (isLoading) {
-        return <Loading></Loading>
-    }
-
 
 
 

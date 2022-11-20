@@ -60,9 +60,9 @@ const AvaiablePurchase = () => {
                             <br />
                             <p>{p.description}</p>
                             <br />
-                            <p>{p.minOrderQuantity}</p>
+                            <p>Minimum Order: {p.minOrderQuantity}</p>
                             <br />
-                            <p>{p.pricePerUnit}</p>
+                            <p> Price: {p.pricePerUnit}</p>
                             <br />
                             <button onClick={() => handlePurchase(p._id)} className='theButton'>Purchase</button>
                         </div>

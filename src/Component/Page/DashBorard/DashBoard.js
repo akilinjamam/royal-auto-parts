@@ -10,37 +10,53 @@ const DashBoard = () => {
 
     console.log(admin)
     return (
-        <div>
+        <div style={{ minHeight: '100vh' }} >
             <br /><br /><br />
-            <div class="navbar bg-neutral text-neutral-content lg:w-3/3 mx-auto justify-evenly rounded-lg">
-                {user && !admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard' >My Order</Link></li>}
-                {
-                    user && !admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/addReview' >Add Review</Link></li>
-                }
+            <div className='flex justify-between '>
 
-                {user && !admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/myProfile' >Add My Profile</Link></li>}
+                <div data-aos='fade-right' data-aos-duration='800' style={{ width: '260px', height: '480px', borderRight: '1px solid red', borderTop: '1px solid red', borderBottom: '1px solid red', marginTop: '50px', borderRadius: '0px 10px 10px 0px' }} className='' >
 
-                {
-                    user && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/seeProfile' >See My Profile</Link></li>
-                }
+                    <div className='ml-5'>
+                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600 ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left', marginTop: '70px' }}><Link to='/dashboard' >My Order</Link></div>}
+                        {
+                            user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/addReview' >Add Review</Link></div>
+                        }
 
-                {admin && <div></div>}
+                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/myProfile' >Add My Profile</Link></div>}
 
-                {admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/manageOrder' >Manage All Orders</Link></li>}
+                        {
+                            user && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/seeProfile' >See My Profile</Link></div>
+                        }
 
-                {admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/manageProduct' >Manage All Products</Link></li>}
+                        {admin && <div></div>}
 
-                {
-                    admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/addProduct' >Add Product</Link></li>
-                }
-                {
-                    admin && <li className='mr-5 btn btn-neutral '><Link to='/dashboard/makeAdmin' >Make Admin</Link></li>
+                        {admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/manageOrder' >Manage All Orders</Link></div>}
 
-                }
+                        {admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/manageProduct' >Manage All Products</Link></div>}
+
+                        {
+                            admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/addProduct' >Add Product</Link></div>
+                        }
+                        {
+                            admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/makeAdmin' >Make Admin</Link></div>
+
+                        }
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <br />
+                    <h2 className='text-4xl font-bold text-blue-600'>Dashboard</h2>
+                    <br />
+                    <div style={{ width: '900px', height: '400px', marginRight: '20px', overflowY: 'scroll' }}>
+                        <Outlet></Outlet>
+                    </div>
+                </div>
             </div>
             <br />
-            <h2 className='text-4xl font-bold text-blue-600'>Dashboard</h2>
-            <Outlet></Outlet>
+
         </div>
     );
 };

@@ -28,13 +28,13 @@ const MakeAdmin = () => {
 
 
             <div class="overflow-x-auto">
-                <table class="table w-full">
+                <table class="text-left text-white w-5/6">
 
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Make Admin</th>
+                            <th className='color'>SL</th>
+                            <th className='color'>Name</th>
+                            <th className='color'>Make Admin</th>
 
                         </tr>
                     </thead>

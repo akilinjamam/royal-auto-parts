@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Navbar/Loading/Loading';
+import DeleteUser from './DeleteUser';
 
 const SeeProfile = () => {
 
@@ -27,8 +28,50 @@ const SeeProfile = () => {
 
     return (
         <div>
-            this is your Profile: {profile.length}
-            <div class="overflow-x-auto">
+
+            <div >
+                <br />
+                {
+                    profile.map((p, index) =>
+
+                        <div className='border-b-2 border-red-600 pb-5 pt-5'>
+                            <div className='flex text-left justify-between text-white'>
+                                {/* div one */}
+                                <div style={{ width: '' }}>
+                                    <p></p>
+                                    <p>Name : {p.name}</p>
+                                    <p>Email : {p.email}</p>
+                                    <p>Education : {p.education}</p>
+
+                                </div>
+
+                                {/* div two */}
+                                <div style={{ width: '500px' }}>
+                                    <p>Location : {p.location} </p>
+                                    <p>Price Per Unit: {p.linkdin} </p>
+                                    <br />
+                                    <p><Link to={`/dashboard/updateProfile/${p._id}`}> <button className='btn btn-xs'>Update</button></Link></p>
+                                </div>
+                            </div>
+                            <br />
+
+
+                        </div>
+
+                    )
+                }
+            </div>
+        </div>
+    );
+};
+
+export default SeeProfile;
+
+
+
+/* 
+
+ <div class="overflow-x-auto">
                 <table class="table w-full">
 
                     <thead>
@@ -66,8 +109,6 @@ const SeeProfile = () => {
                     </tbody>
                 </table>
             </div>
-        </div>
-    );
-};
 
-export default SeeProfile;
+
+*/

@@ -22,17 +22,17 @@ const ManageProducts = () => {
 
             <br />
             <div class="overflow-x-auto">
-                <table class="table w-full">
+                <table class=" w-5/6 text-left text-white">
 
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>quantity</th>
-                            <th>available quantity</th>
-                            <th>price</th>
-                            <th></th>
-                            <th></th>
+                            <th className='color'>SL</th>
+                            <th className='color'>Name</th>
+                            <th className='color'>quantity</th>
+                            <th className='color'>available quantity</th>
+                            <th className='color'>price</th>
+                            <th className='color'></th>
+                            <th className='color'></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -41,13 +41,13 @@ const ManageProducts = () => {
 
                         {
                             parts.map((p, index) => <tr key={p._id} class="active">
-                                <th>{index + 1}</th>
-                                <td>{p.name}</td>
-                                <td>{p.minOrderQuantity}</td>
-                                <td>{p.availableQuantity}</td>
-                                <td>{p.pricePerUnit}</td>
-                                <td> <Link to={`/dashboard/updateProduct/${p._id}`}> <button className='btn btn-xs'>Update</button></Link> </td>
-                                <td> <button className='btn btn-xs'> Delete </button> </td>
+                                <th className='border-b-2 border-red-600 pb-3 pt-3'>{index + 1}</th>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'>{p.name}</td>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'>{p.minOrderQuantity}</td>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'>{p.availableQuantity}</td>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'>{p.pricePerUnit}</td>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'> <Link to={`/dashboard/updateProduct/${p._id}`}> <button className='btn btn-xs'>Update</button></Link> </td>
+                                <td className='border-b-2 border-red-600 pb-3 pt-3'> <button className='btn btn-xs'> Delete </button> </td>
 
                             </tr>)
                         }

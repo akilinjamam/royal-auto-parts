@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const PartThree = ({ part }) => {
 
@@ -48,7 +48,7 @@ const PartThree = ({ part }) => {
                         </div>
 
                         <div data-aos='fade-right' data-aos-duration='1000'>
-                            <button className='theButton '> View All Parts </button>
+                            <button className='theButton '> <Link to='/availablePurchase'>View All Parts</Link> </button>
                         </div>
                     </div>
                 </div>

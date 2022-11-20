@@ -58,22 +58,31 @@ const AddProducts = () => {
 
     return (
         <div>
-            <h2>add products</h2>
-            <div className='border border-gray-400 rounded-lg p-5 lg:w-1/3 mx-auto'>
+
+
+            <div className='border border-red-600 rounded-lg p-5 lg:w-5/6 mx-auto'>
+
+                <h2 className='text-emerald-400 bg-red-600 rounded p-3 sticky top-0 font-bold text-3xl mb-10 uppercase'>Add Product </h2>
                 <form onSubmit={addParts} >
 
-                    <input type="text" name='name' placeholder="type parts name" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                    <div className='flex justify-evenly'>
+                        <div>
+                            <input style={{ background: 'none', border: '1px solid gray' }} type="text" name='name' placeholder="type parts name" class="input input-bordered w-full max-w-xs" required /><br /><br />
 
 
-                    <textarea type="text" name='description' placeholder="Type a Short Description" class="input input-bordered w-full max-w-xs h-24 " required /><br /><br />
+                            <textarea style={{ background: 'none', border: '1px solid gray' }} type="text" name='description' placeholder="Type a Short Description" class="input input-bordered w-full max-w-xs h-24 " required /><br /><br />
 
-                    <input type="number" name='minQuntity' placeholder="give minimum quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                    <input type="number" name='availableQuantity' placeholder=" give available quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                    <input type="number" name='price' placeholder="give price" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                    <input type="text" name='img' placeholder=" provide image link here" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='minQuntity' placeholder="give minimum quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='availableQuantity' placeholder=" give available quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                        </div>
+                        <div>
+                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='price' placeholder="give price" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray' }} type="text" name='img' placeholder=" provide image link here" class="input input-bordered w-full max-w-xs" required /><br /><br />
 
-                    <br />
-                    <input class="btn btn-sm" type="submit" value=" Add Product" />
+                            <br />
+                            <input class="btn btn-sm" type="submit" value=" Add Product" />
+                        </div>
+                    </div>
                 </form>
             </div>
 

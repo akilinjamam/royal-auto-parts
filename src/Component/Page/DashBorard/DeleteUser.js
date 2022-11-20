@@ -33,9 +33,9 @@ const DeleteUser = ({ deleteUsers, setDeleteUsers, refetch }) => {
 
             <input type="checkbox" id="delete-user" class="modal-toggle" />
             <div class="modal">
-                <div class="modal-box">
+                <div style={{ background: 'red' }} class="modal-box ">
                     <label for="delete-user" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="font-bold text-lg">Are you sure You Want to Delete: {partsName} </h3>
+                    <h3 class="font-bold text-lg text-black">Are you sure You Want to Delete: {partsName} </h3>
 
                     <div class="modal-action">
                         <label onClick={() => handleDelete(partsName, _id)} for="delete-user" class="btn">Delete</label>

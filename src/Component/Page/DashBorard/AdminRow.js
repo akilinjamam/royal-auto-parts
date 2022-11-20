@@ -37,9 +37,9 @@ const AdminRow = ({ user, index, refetch }) => {
 
     return (
         <tr class="active">
-            <th>{index + 1}</th>
-            <td> {user.email} </td>
-            <td> {user.role !== 'admin' ? <button onClick={() => makeAdmin(user.email, refetch)} className='btn btn-xs'> Make Admin </button> : <p onClick={alreadyAdmin} className='btn bg-red-500 border-0 btn-xs'> rolling as Admin </p>} </td>
+            <th className='border-b-2 border-red-600 pb-3 pt-3'>{index + 1}</th>
+            <td className='border-b-2 border-red-600 pb-3 pt-3'> {user.email} </td>
+            <td className='border-b-2 border-red-600 pb-3 pt-3'> {user.role !== 'admin' ? <button onClick={() => makeAdmin(user.email, refetch)} className='btn btn-xs'> Make Admin </button> : <p onClick={alreadyAdmin} className='btn bg-red-500 border-0 btn-xs'> rolling as Admin </p>} </td>
 
         </tr>
     );
