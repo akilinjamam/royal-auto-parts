@@ -21,6 +21,8 @@ This website is for wholsale car parts. where customer can order there products 
 * AOS
 * React-tsParticles
 * Parallax
+* react-countup
+* react-scroll-trigger
 
 ### Technologies for Server-site:
 
