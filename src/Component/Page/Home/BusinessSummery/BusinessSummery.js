@@ -14,41 +14,41 @@ const BusinessSummery = () => {
         <ScrollTrigger onEnter={() => setCounterStart(true)} onExit={() => setCounterStart(false)} >
             <div className='background-modification-three'>
                 <div className='w-5/6 mx-auto '>
-                    <br /><br />
+                    <br />
                     <div data-aos='fade-up' data-aos-duration='1000'>
                         <h2 className='text-4xl font-bold color theFonts '>Business Summery</h2>
                     </div>
-                    <br />
+
                     <div style={{}}>
 
                         <div className='lg:grid grid-cols-5 sm:grid-cols'>
 
                             <div data-aos='zoom-in' data-aos-duration='1000' >
-                                <img style={{ width: '120px' }} className='m-16' src={customer} alt="" />
+                                <img style={{ width: '100px' }} className='m-16' src={customer} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'> <span> {counterStart && <CountUp start={200} end={460} duration={3} delay={0} />}</span>+ Customers </p>
                             </div>
                             <div data-aos='zoom-in' data-aos-duration='1500' >
 
-                                <img style={{ width: '120px' }} className='m-16' src={reveneue} alt="" />
+                                <img style={{ width: '100px' }} className='m-16' src={reveneue} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'><p> <span> {counterStart && <CountUp start={150} end={120} duration={3} delay={0} />}</span>M+</p>Reveneue</p>
                             </div>
                             <div data-aos='zoom-in' data-aos-duration='1200' >
 
-                                <img style={{ width: '120px' }} className='m-16' src={reviews} alt="" />
+                                <img style={{ width: '100px' }} className='m-16' src={reviews} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'> <p><span> {counterStart && <CountUp start={25} end={49} duration={3} delay={0} />}</span>K</p>  Reviews </p>
                             </div>
                             <div data-aos='zoom-in' data-aos-duration='2500' >
 
-                                <img style={{ width: '120px' }} className='m-16' src={employees} alt="" />
+                                <img style={{ width: '100px' }} className='m-16' src={employees} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500' ><span> {counterStart && <CountUp start={100} end={220} duration={3} delay={0} />}</span>+  Employees</p>
                             </div>
                             <div data-aos='zoom-in' data-aos-duration='3000'>
 
-                                <img style={{ width: '120px' }} className='m-16' src={parts} alt="" />
+                                <img style={{ width: '100px' }} className='m-16' src={parts} alt="" />
                                 <p className='text-3xl  font-bold text-yellow-500' ><p> <span> {counterStart && <CountUp start={20} end={80} duration={3} delay={0} />}</span>+</p>Car Parts</p>
                             </div>
                         </div>
