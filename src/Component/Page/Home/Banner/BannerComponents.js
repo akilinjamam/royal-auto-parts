@@ -14,15 +14,15 @@ const BannerComponents = () => {
                 </div>
 
                 <div className=' mb-10' style={{ width: '450px', textAlign: 'left' }}>
-                    <div data-aos='fade-left' data-aos-duration='1500'>
+                    <div data-aos='fade-right' data-aos-duration='1500'>
                         <p className='theFonts color size'>Royal Auto Parts</p>
                     </div>
 
-                    <div data-aos='fade-left' data-aos-duration='2000'>
+                    <div data-aos='fade-right' data-aos-duration='2000'>
                         <p className='text-gray-400 theFonts'>We are ready to provide you the best automotive parts for your vehical with Gurantee.<br /> No excuse just Move on.... </p>
                     </div>
                     <br />
-                    <div data-aos='fade-left' data-aos-duration='3000'>
+                    <div data-aos='fade-right' data-aos-duration='3000'>
                         <button className='theButton'><Link to='/availablePurchase'>View All Available Parts</Link></button>
                     </div>
                 </div>

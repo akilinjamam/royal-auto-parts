@@ -26,7 +26,8 @@ const MakeAdmin = () => {
     return (
         <div>
 
-
+            <p className='color text-2xl font-bold text-left theFonts'>Make Admin</p>
+            <br />
             <div class="overflow-x-auto">
                 <table class="text-left text-white w-5/6">
 

@@ -17,9 +17,10 @@ const ManageProducts = () => {
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
+
     return (
         <div>
-
+            <p className='text-left color font-bold text-2xl theFonts' >Manage All Products</p>
             <br />
             <div class="overflow-x-auto">
                 <table class=" w-5/6 text-left text-white">

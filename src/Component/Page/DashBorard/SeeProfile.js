@@ -30,11 +30,11 @@ const SeeProfile = () => {
         <div>
 
             <div >
-                <br />
+                <p className='color text-left font-bold text-2xl theFonts'>My Profile</p>
                 {
                     profile.map((p, index) =>
 
-                        <div className='border-b-2 border-red-600 pb-5 pt-5'>
+                        <div className='border-b-2 border-red-600 pb-5 pt-5 mr-10'>
                             <div className='flex text-left justify-between text-white'>
                                 {/* div one */}
                                 <div style={{ width: '' }}>
@@ -42,6 +42,9 @@ const SeeProfile = () => {
                                     <p>Name : {p.name}</p>
                                     <p>Email : {p.email}</p>
                                     <p>Education : {p.education}</p>
+                                    <br />
+                                    <p><Link to={`/dashboard/updateProfile/${p._id}`}>
+                                        <button className='btn btn-xs'>Update</button></Link></p>
 
                                 </div>
 
@@ -49,8 +52,8 @@ const SeeProfile = () => {
                                 <div style={{ width: '500px' }}>
                                     <p>Location : {p.location} </p>
                                     <p>Price Per Unit: {p.linkdin} </p>
-                                    <br />
-                                    <p><Link to={`/dashboard/updateProfile/${p._id}`}> <button className='btn btn-xs'>Update</button></Link></p>
+
+
                                 </div>
                             </div>
                             <br />

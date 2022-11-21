@@ -57,22 +57,22 @@ const UpdateProfile = () => {
     }
     return (
         <div>
-            <div class="artboard lg:w-1/4 mx-auto border border-emerald-400 p-10 rounded-xl mt-9">
+            <div className='text-left'>
 
 
-                <h2 className='text-emerald-400 font-bold text-3xl mb-10 uppercase'>Update profile </h2>
-
-                <p className='text-red-400'> ID:{uId}</p><br />
+                <h2 className='color font-bold text-2xl text-left theFonts'>Update profile </h2>
+                <br />
+                <p className='text-red-400 pb-3 border-b-2 border-red-400 mr-4'>Profile ID : {uId}</p><br />
 
                 <form onSubmit={updateProfile} action="">
 
-                    <textarea type="text" name='education' placeholder="Type Education" class="input input-bordered input-primary w-full max-w-xs h-16" required />
+                    <textarea style={{ background: "none", border: "1px solid gray", borderRadius: "10px", padding: '7px', width: '300px' }} type="text" name='education' placeholder="Type Education" required />
+                    <br /><br />
+                    <input style={{ background: "none", border: "1px solid gray", borderRadius: "10px", padding: '7px', width: '300px' }} type="text" name='location' placeholder="Type Location City/District" required /><br /><br />
 
-                    <input type="text" name='location' placeholder="Type Location City/District" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                    <input style={{ background: "none", border: "1px solid gray", borderRadius: "10px", padding: '7px', width: '300px' }} type="text" name='linkdin' placeholder="Type Linkdin profile name" required /><br /><br />
 
-                    <input type="text" name='linkdin' placeholder="Type Linkdin profile name" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
-
-                    <input className='btn btn-primary lg:w-full  text-white  ' type="submit" value="Update" />
+                    <input className='theButton' type="submit" value="Update" />
 
 
                 </form>

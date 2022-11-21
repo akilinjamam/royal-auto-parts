@@ -55,11 +55,12 @@ const MyOrder = () => {
 
 
         <div >
+            <p className='color text-2xl text-left font-bold theFonts'>My Orders</p>
             <br />
             {
                 myOrders.map((order, index) =>
 
-                    <div className='border-b-2 border-red-600 pb-5 pt-5'>
+                    <div className='border-b-2 border-red-600 pb-5 pt-5 mr-7'>
                         <div className='flex text-left justify-between text-white'>
                             {/* div one */}
                             <div style={{ width: '' }}>

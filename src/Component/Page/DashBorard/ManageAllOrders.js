@@ -66,7 +66,9 @@ const ManageAllOrders = () => {
 
     return (
         <div>
-            <h2>Manage All Orders : Under Working </h2>
+            <p className='color text-2xl font-bold text-left theFonts'>Manage Orders</p>
+            <br />
+            <h2 className='text-white text-left'>This section is Under Working</h2>
 
             {/* <div className="overflow-x-auto">
                 <table className="table w-full">

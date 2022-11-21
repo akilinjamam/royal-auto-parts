@@ -27,9 +27,7 @@
 
 
 
-.backgroundHover:hover {
+.backgroundHover {
 
-    background-color: rgb(7, 0, 99);
-    transition: .8s ease-in;
-
+    background-color: black
 }

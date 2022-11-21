@@ -54,8 +54,8 @@ const ViewReviews = () => {
     return (
         <div>
             <div className=' mx-auto w-4/6'>
-                <br /><br /><br />
-                <h2 data-aos='fade-up' data-aos-duration='1000' className='text-4xl font-bold color theFonts'>All Reviews</h2>
+                <br /><br /><br /><br />
+                <h2 data-aos='fade-up' data-aos-duration='1000' className='text-4xl font-bold color theFonts text-left'>All Reviews</h2>
                 <br /><br />
                 <div >
                     {/* className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10' */}

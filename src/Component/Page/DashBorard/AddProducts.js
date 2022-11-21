@@ -60,29 +60,29 @@ const AddProducts = () => {
         <div>
 
 
-            <div className='border border-red-600 rounded-lg p-5 lg:w-5/6 mx-auto'>
+            <div className='text-left ml-1 text-white'>
 
-                <h2 className='text-emerald-400 bg-red-600 rounded p-3 sticky top-0 font-bold text-3xl mb-10 uppercase'>Add Product </h2>
+                <p className='color text-2xl font-bold mb-5 theFonts'>Add Product</p>
                 <form onSubmit={addParts} >
 
-                    <div className='flex justify-evenly'>
-                        <div>
-                            <input style={{ background: 'none', border: '1px solid gray' }} type="text" name='name' placeholder="type parts name" class="input input-bordered w-full max-w-xs" required /><br /><br />
 
 
-                            <textarea style={{ background: 'none', border: '1px solid gray' }} type="text" name='description' placeholder="Type a Short Description" class="input input-bordered w-full max-w-xs h-24 " required /><br /><br />
+                    <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '10px', marginBottom: '10px' }} type="text" name='name' placeholder="type parts name" required />
+                    <br />
 
-                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='minQuntity' placeholder="give minimum quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='availableQuantity' placeholder=" give available quantity" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                        </div>
-                        <div>
-                            <input style={{ background: 'none', border: '1px solid gray' }} type="number" name='price' placeholder="give price" class="input input-bordered w-full max-w-xs" required /><br /><br />
-                            <input style={{ background: 'none', border: '1px solid gray' }} type="text" name='img' placeholder=" provide image link here" class="input input-bordered w-full max-w-xs" required /><br /><br />
+                    <textarea style={{ background: 'none', border: '1px solid gray', width: '400px', borderRadius: '10px', padding: '7px' }} type="text" name='description' placeholder="Type a Short Description" /><br />
 
-                            <br />
-                            <input class="btn btn-sm" type="submit" value=" Add Product" />
-                        </div>
-                    </div>
+                    <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '10px', marginBottom: '10px' }} type="number" name='minQuntity' placeholder="give minimum quantity" required />
+                    <input style={{ background: 'none', border: '1px solid gray', marginLeft: '20px', borderRadius: '10px', padding: '10px', marginBottom: '10px' }} type="number" name='availableQuantity' placeholder=" give available quantity" required /><br />
+
+                    <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '10px', marginBottom: '10px' }} type="number" name='price' placeholder="give price" required />
+
+                    <input style={{ background: 'none', border: '1px solid gray', marginLeft: '20px', borderRadius: '10px', padding: '10px', marginBottom: '10px' }} type="text" name='img' placeholder=" provide image link here" required /><br />
+
+
+                    <input className='theButton' type="submit" value=" Add Product" />
+
+
                 </form>
             </div>
 

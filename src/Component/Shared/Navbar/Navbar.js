@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <div className=' mx-auto'>
 
-            <div style={{ zIndex: '10' }} className="navbar rounded fixed backgroundHover">
+            <div style={{ zIndex: '10' }} className="navbar rounded p-0 fixed backgroundHover">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
 
                         <li className='hover:text-red-700'><Link to='/availablePurchase'>Available Parts</Link></li>
                         <li className='hover:text-red-700'><Link to='/viewReviews'>All Reviews</Link></li>
-                        <li className='hover:text-red-700'><Link to='/myPortfolio'>My Portfolio</Link></li>
+                        {/* <li className='hover:text-red-700'><Link to='/myPortfolio'>My Portfolio</Link></li> */}
                         <li className='hover:text-red-700'><Link to='/blog'>Blogs</Link></li>
 
                         {
@@ -68,7 +68,7 @@ const Navbar = () => {
                         }
 
                         {
-                            user && <li> {user.photoURL !== null ? <img style={{ borderRadius: '50px', }} className='w-2/4 ' src={user?.photoURL} alt="" /> : <li> <img style={{ borderRadius: '50px', width: '70px' }} src={defaultImage} alt="" /> </li>} </li>
+                            user && <li> {user.photoURL !== null ? <img style={{ borderRadius: '50px', }} className='w-2/4 ' src={user?.photoURL} alt="" /> : <li> <img style={{ borderRadius: '50px', width: '55px' }} src={defaultImage} alt="" /> </li>} </li>
                         }
 
 

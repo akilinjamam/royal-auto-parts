@@ -54,28 +54,25 @@ const MyProfile = () => {
             })
     }
     return (
-        <div className=' my-5'>
-
-            <br />
-            <div class="artboard lg:w-3/4 mx-auto border  border-emerald-400 p-10 rounded-xl">
-
+        <div className='  '>
+            <div>
                 <form onSubmit={handleProfile} action="">
 
-                    <h2 className='text-emerald-400 font-bold text-3xl mb-10 uppercase'>my profile</h2>
+                    <h2 className='color text-2xl text-left font-bold  mb-5 theFonts' >Add My Profile</h2>
 
-                    <div className='flex'>
+                    <div className='flex text-white ml-1'>
                         <div>
-                            <input style={{ background: 'none' }} readOnly type="text" name='name' value={user.displayName} class="input input-bordered input-primary w-full max-w-xs" /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '7px' }} readOnly type="text" name='name' value={user.displayName} /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='email' value={user.email} class="input input-bordered input-primary w-full max-w-xs" /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '7px' }} type="text" name='email' value={user.email} /><br /><br />
 
-                            <textarea style={{ background: 'none' }} type="text" name='education' placeholder="Type Education" class="input input-bordered input-primary w-full max-w-xs h-12" required />
+                            <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '7px', width: '100%' }} type="text" name='education' placeholder="Type Education" required />
                         </div>
 
                         <div className='ml-10'>
-                            <input style={{ background: 'none' }} type="text" name='location' placeholder="Type Location City/District" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '7px' }} type="text" name='location' placeholder="Type Location City/District" required /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='linkdin' placeholder="Type Linkdin profile name" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', border: '1px solid gray', borderRadius: '10px', padding: '7px' }} type="text" name='linkdin' placeholder="Type Linkdin profile name" required /><br /><br />
 
                             <input className=' theButton w-full  text-white  ' type="submit" value="SUBMIT" />
                         </div>

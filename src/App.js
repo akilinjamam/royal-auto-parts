@@ -29,40 +29,47 @@ import UpdateProduct from './Component/Page/DashBorard/UpdateProduct';
 import background from './background-image/car-background.png'
 import AvaiablePurchase from './Component/Page/Parchase/AvaiablePurchase';
 import ViewReviews from './Component/Page/Home/Reviews/ViewReviews';
+import Warning from './Warnings/Warning';
 
 function App() {
   return (
     <div className="App" >
-      <Navbar></Navbar>
-      <Routes>
-        <Route path='/' element={<Home></Home>} ></Route>
-        <Route path='/home' element={<Home></Home>} ></Route>
-        <Route path='/availablePurchase' element={<AvaiablePurchase></AvaiablePurchase>} ></Route>
-        <Route path='/viewReviews' element={<ViewReviews></ViewReviews>} ></Route>
-        <Route path='/purchase/:purchaseId' element={<RequireAuth><Parchase></Parchase></RequireAuth>} ></Route>
-        <Route path='/login' element={<Login></Login>} ></Route>
-        <Route path='/signup' element={<SignUp></SignUp>} ></Route>
-        <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>} >
+      <div className='warnings'>
+        <Warning></Warning>
+      </div>
 
-          <Route path='addReview' element={<AddReview></AddReview>}></Route>
-          <Route index element={<MyOrder></MyOrder>}></Route>
-          <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='payment/:id' element={<Payment></Payment>}></Route>
-          <Route path='seeProfile' element={<SeeProfile></SeeProfile>}></Route>
-          <Route path='updateProfile/:uId' element={<UpdateProfile></UpdateProfile>}></Route>
-          <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
-          <Route path='manageOrder' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
-          <Route path='manageProduct' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
-          <Route path='addProduct' element={<RequireAdmin><AddProducts></AddProducts></RequireAdmin>}></Route>
-          <Route path='updateProduct/:uId' element={<RequireAdmin><UpdateProduct></UpdateProduct></RequireAdmin>}></Route>
+      <div className='main'>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path='/' element={<Home></Home>} ></Route>
+          <Route path='/home' element={<Home></Home>} ></Route>
+          <Route path='/availablePurchase' element={<AvaiablePurchase></AvaiablePurchase>} ></Route>
+          <Route path='/viewReviews' element={<ViewReviews></ViewReviews>} ></Route>
+          <Route path='/purchase/:purchaseId' element={<RequireAuth><Parchase></Parchase></RequireAuth>} ></Route>
+          <Route path='/login' element={<Login></Login>} ></Route>
+          <Route path='/signup' element={<SignUp></SignUp>} ></Route>
+          <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>} >
+
+            <Route path='addReview' element={<AddReview></AddReview>}></Route>
+            <Route index element={<MyOrder></MyOrder>}></Route>
+            <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
+            <Route path='payment/:id' element={<Payment></Payment>}></Route>
+            <Route path='seeProfile' element={<SeeProfile></SeeProfile>}></Route>
+            <Route path='updateProfile/:uId' element={<UpdateProfile></UpdateProfile>}></Route>
+            <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
+            <Route path='manageOrder' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
+            <Route path='manageProduct' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
+            <Route path='addProduct' element={<RequireAdmin><AddProducts></AddProducts></RequireAdmin>}></Route>
+            <Route path='updateProduct/:uId' element={<RequireAdmin><UpdateProduct></UpdateProduct></RequireAdmin>}></Route>
 
 
-        </Route>
-        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
-        <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
-      </Routes>
-      <ToastContainer></ToastContainer>
+          </Route>
+          <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+          <Route path='/blog' element={<Blog></Blog>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Routes>
+        <ToastContainer></ToastContainer>
+      </div>
     </div>
   );
 }

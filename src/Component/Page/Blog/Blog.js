@@ -4,7 +4,7 @@ const Blog = () => {
     return (
         <div>
             <br /><br /><br />
-            <div className="card-body shadow-xl text-left">
+            <div className="card-body shadow-xl text-left text-white">
                 <h3 className="text-xl font-bold">Q1.  How will you improve the performance of a React Application?</h3>
                 <p className='text-left'> <span className="font-bold  "> Answer:</span> <br /> There are ways where you can still speed up your React application. <br />
                     1.Using Immutable Data Structures <br />
@@ -17,7 +17,7 @@ const Blog = () => {
                 </p>
             </div>
 
-            <div className="card-body shadow-xl text-left">
+            <div className="card-body shadow-xl text-left text-white">
                 <h3 className="text-xl font-bold">Q2.  What are the different ways to manage a state in a React application?</h3>
                 <p ><span className="font-bold "> Answer:</span> <br />
                     1.The useReducer hook is a powerful provided React hook for dealing with complex state management that doesnt require third-party dependencies. Also, it reduces the amount of data recreated with each render. <br />
@@ -28,7 +28,7 @@ const Blog = () => {
                 </p>
             </div>
 
-            <div className="card-body shadow-xl text-left">
+            <div className="card-body shadow-xl text-left text-white">
                 <h3 className="text-xl font-bold">Q3.  How does prototypical inheritance work?</h3>
                 <p ><span className="font-bold "> Answer:</span> <br />
                     Simply put, prototypical inheritance refers to the ability to access object properties from another object. We use a JavaScript prototype to add new properties and methods to an existing object constructor. We can then essentially tell our JS code to inherit properties from a prototype. Prototypical inheritance allows us to reuse the properties or methods from one JavaScript object to another through a reference pointer function.
@@ -37,7 +37,7 @@ const Blog = () => {
                 </p>
             </div>
 
-            <div className="card-body shadow-xl text-left">
+            <div className="card-body shadow-xl text-left text-white">
                 <h3 className="text-xl font-bold">Q4. Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</h3>
                 <p > <span className="font-bold "> Answer:</span> <br />
                     One should never update the state directly because of the following reasons:
@@ -49,7 +49,7 @@ const Blog = () => {
                 </p>
             </div>
 
-            <div className="card-body shadow-xl text-left">
+            <div className="card-body shadow-xl text-left text-white">
                 <h3 className="text-xl font-bold">Q5.  What is a unit test? Why should write unit tests?
 
                 </h3>

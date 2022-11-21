@@ -64,30 +64,32 @@ const UpdateProduct = () => {
     }
     return (
         <div>
-            <div class="artboard lg:w-5/6 mx-auto border text-white border-emerald-400 p-6 rounded-xl mt-9">
+            <div className='mr-5' >
 
+                <p className='color text-2xl font-bold text-left mb-4'>Update Product</p>
 
-                <h2 className='text-emerald-400 bg-red-600 rounded p-3 sticky top-0 font-bold text-3xl mb-10 uppercase'>Update Product </h2>
-
-                <p className='text-red-400'> ID:{uId}</p><br />
+                <p className='text-red-400 text-left border-b-2 border-red-400 pb-2 '>Product ID :  {uId}</p><br />
 
                 <form onSubmit={updateProduct} action="">
 
                     <div className='flex w-full' >
                         <div>
-                            <textarea style={{ background: 'none' }} type="text" name='name' placeholder="Type product name" class="input input-bordered input-primary w-full max-w-xs h-16" required />
+                            <input style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray' }} type="text" name='name' placeholder="Type product name" required />
+                            <br /><br />
+                            <textarea style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray', width: '100%' }} type="text" name='description' placeholder="Type description" required /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='description' placeholder="Type description" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray' }} type="number" name='quantity' placeholder="Type minimum quantity" required /><br /><br />
 
-                            <input style={{ background: 'none' }} type="number" name='quantity' placeholder="Type minimum quantity" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
-                            <input style={{ background: 'none' }} type="number" name='availableQuantity' placeholder="Type available quantity" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+
+                            <input className='theButton lg:w-full  text-white  ' type="submit" value="Update" />
                         </div>
-                        <div>
-                            <input style={{ background: 'none' }} type="number" name='price' placeholder="Type price" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                        <div className='ml-10'>
+                            <input style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray' }} type="number" name='price' placeholder="Type price" required /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='img' placeholder="Type img link" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray' }} type="text" name='img' placeholder="Type img link" required /><br /><br />
 
-                            <input className='btn btn-primary lg:w-full  text-white  ' type="submit" value="Update" />
+                            <input style={{ background: 'none', padding: '7px', borderRadius: '10px', border: '1px solid gray' }} type="number" name='availableQuantity' placeholder="Type available quantity" required /><br /><br />
+
                         </div>
                     </div>
 
@@ -107,17 +109,17 @@ export default UpdateProduct;
 
  <div className='flex'>
                         <div>
-                            <input style={{ background: 'none' }} readOnly type="text" name='name' value={user.displayName} class="input input-bordered input-primary w-full max-w-xs" /><br /><br />
+                            <input style={{ background: 'none',  padding:'7px', borderRadius:'10px', border:'1px solid gray' }} readOnly type="text" name='name' value={user.displayName}  /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='email' value={user.email} class="input input-bordered input-primary w-full max-w-xs" /><br /><br />
+                            <input style={{ background: 'none',  padding:'7px', borderRadius:'10px', border:'1px solid gray' }} type="text" name='email' value={user.email}  /><br /><br />
 
-                            <textarea style={{ background: 'none' }} type="text" name='education' placeholder="Type Education" class="input input-bordered input-primary w-full max-w-xs h-12" required />
+                            <textarea style={{ background: 'none',  padding:'7px', borderRadius:'10px', border:'1px solid gray' }} type="text" name='education' placeholder="Type Education" class="input input-bordered input-primary w-full max-w-xs h-12" required />
                         </div>
 
                         <div className='ml-10'>
-                            <input style={{ background: 'none' }} type="text" name='location' placeholder="Type Location City/District" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none',  padding:'7px', borderRadius:'10px', border:'1px solid gray' }} type="text" name='location' placeholder="Type Location City/District"  required /><br /><br />
 
-                            <input style={{ background: 'none' }} type="text" name='linkdin' placeholder="Type Linkdin profile name" class="input input-bordered input-primary w-full max-w-xs" required /><br /><br />
+                            <input style={{ background: 'none',  padding:'7px', borderRadius:'10px', border:'1px solid gray' }} type="text" name='linkdin' placeholder="Type Linkdin profile name"  required /><br /><br />
 
                             <input className=' theButton w-full  text-white  ' type="submit" value="SUBMIT" />
                         </div>

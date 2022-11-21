@@ -16,8 +16,8 @@ const DashBoard = () => {
 
                 <div data-aos='fade-right' data-aos-duration='800' style={{ width: '260px', height: '480px', borderRight: '1px solid red', borderTop: '1px solid red', borderBottom: '1px solid red', marginTop: '50px', borderRadius: '0px 10px 10px 0px' }} className='' >
 
-                    <div className='ml-5'>
-                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600 ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left', marginTop: '70px' }}><Link to='/dashboard' >My Order</Link></div>}
+                    <div className='ml-5 mt-16'>
+                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600 ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard' >My Order</Link></div>}
                         {
                             user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/addReview' >Add Review</Link></div>
                         }
@@ -28,7 +28,7 @@ const DashBoard = () => {
                             user && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/seeProfile' >See My Profile</Link></div>
                         }
 
-                        {admin && <div></div>}
+                        {/* {admin && <div></div>} */}
 
                         {admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/manageOrder' >Manage All Orders</Link></div>}
 

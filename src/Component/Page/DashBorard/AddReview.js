@@ -81,10 +81,10 @@ const AddReview = () => {
 
     return (
         <div>
-            <br /><br />
-            <div className='border border-red-700 rounded p-4 lg:w-1/3 mx-auto font-bold'>
+
+            <div className='text-left text-white' >
                 <div>
-                    <h2 className='text-2xl text-orange-500'>Add Reviews</h2>
+                    <h2 className='text-2xl color text-left font-bold theFonts '>Add Reviews</h2>
                 </div>
                 <br />
                 <form onSubmit={handleReviews} action="">
@@ -93,8 +93,8 @@ const AddReview = () => {
                     {desError}
                     <input style={{ background: 'none', border: '1px solid gray' }} onChange={handleRating} type="number" name='rating' placeholder="please give  ratings" class="input input-bordered w-full max-w-xs" required /><br /><br />
                     {showError}
-                    <br />
-                    <input style={{ background: 'none' }} disabled={parsedRating > 5 || parsedRating < 1 || des.length > 60} class="btn btn-sm" type="submit" value=" place Order" />
+
+                    <input style={{ background: 'none' }} disabled={parsedRating > 5 || parsedRating < 1 || des.length > 60} class="theButton" type="submit" value="Add Review" />
                 </form>
             </div>
         </div>
