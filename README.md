@@ -1,3 +1,47 @@
+# Project name: Royal Auto Parts
+
+This website is for wholsale car parts. where customer can order there products in wholesale rate, A fake Payment system is used as a Demo. Here customer can Create and update their profile, Can give important feedback, Can see their Ordered Product in Dashboard with detail info. Also their is another Admin Dashboard where Only Admin can get Access and Add new product in website with detail, Also can delete and update any post. For Authentication with login and registration, we used firebase and jsonwebtoken for server security 
+
+### Technologies used for client-site:
+
+* React-firebase hooks
+* React-Query
+* React-hook form
+* json web token for api security
+* stripe for fake payment system
+* React Toastify for notification
+
+### Technologies for Designing:
+
+* DaisyUi
+* Tailwind css
+
+### Technologies for Animation:
+
+* AOS
+* React-tsParticles
+* Parallax
+
+### Technologies for Server-site:
+
+* Expressjs
+* cors
+* dotenv
+* stripe
+* json web token
+* MongoDB
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
