@@ -68,7 +68,7 @@ const Navbar = () => {
                         }
 
                         {
-                            user && <li> {user.photoURL !== null ? <img style={{ borderRadius: '50px', }} className='w-2/4 ' src={user?.photoURL} alt="" /> : <li> <img style={{ borderRadius: '50px', width: '55px' }} src={defaultImage} alt="" /> </li>} </li>
+                            user && <div> {user.photoURL !== null ? <img style={{ width: '35px', borderRadius: '50px', marginRight: '20px', marginTop: '7px', marginLeft: '20px' }} src={user?.photoURL} alt="" /> : <img style={{ width: '35px', borderRadius: '50px', marginRight: '20px', marginTop: '7px', marginLeft: '20px' }} src={defaultImage} alt="" />} </div>
                         }
 
 
