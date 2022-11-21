@@ -14,7 +14,7 @@ const BusinessSummery = () => {
         <ScrollTrigger onEnter={() => setCounterStart(true)} onExit={() => setCounterStart(false)} >
             <div className='background-modification-three'>
                 <div className='w-5/6 mx-auto '>
-                    <br />
+                    <br /><br />
                     <div data-aos='fade-up' data-aos-duration='1000'>
                         <h2 className='text-4xl font-bold color theFonts '>Business Summery</h2>
                     </div>
