@@ -1,0 +1,24 @@
+.resAvailableMain {
+
+    width: 85%;
+    min-height: 100vh;
+}
+
+
+@media screen and (max-width: 480px) {
+    .resAvailableparts {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .resAvailableImg {
+        margin-bottom: 30px;
+    }
+
+    .resAvailableMain {
+
+        width: 100%;
+        min-height: 100vh;
+    }
+
+}
