@@ -13,20 +13,15 @@ const PartThree = ({ part }) => {
     const { _id, img, name, description, minOrderQuantity, availableQuantity, pricePerUnit
     } = part
     return (
-        <div className='background-modification-two '>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className='flex w-5/6 mx-auto justify-between  items-center'  >
+        <div style={{ height: '140vh' }} className='background-modification-two flex justify-center items-center resPartTreeMain '>
+
+            <div className='flex w-5/6 mx-auto justify-between items-center resPartThree'   >
                 <div data-aos='zoom-in' data-aos-duration='1000' className='image-part'>
                     <img src={img} />
                 </div>
 
-                <div className='detail-part'>
-                    <div data-aos='fade-up' data-aos-duration='1200'>
+                <div className='detail-part resDetailThree '>
+                    <div data-aos='fade-up' data-aos-duration='1200' className='resPartDetailTitle'>
                         <p>{name} </p>
                     </div>
                     <br />

@@ -9,6 +9,49 @@
 
 .detail-part {
     text-align: left;
-    width: 500px;
+    width: 380px;
     color: lightgray;
+}
+
+@media screen and (max-width: 480px) {
+
+    .detail-part {
+        margin-top: 40px;
+    }
+
+    .resParts {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .partsImg {
+        margin: auto;
+        width: 400px;
+    }
+
+    .resPartsDetails {
+
+        margin-top: 28px;
+        width: 480px;
+    }
+
+    .resPartTwo {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .resPartThree {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .resDetailThree {
+        margin-top: 30px;
+    }
+
+    .resPartDetailTitle {
+        margin-top: 15px;
+    }
+
+
 }

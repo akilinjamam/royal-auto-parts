@@ -51,7 +51,25 @@
 
 /* responsiveness */
 
-@media screen and (min-width: 0px) and (max-width: 1200px) {
+@media screen and (max-width: 480px) {
+
+
+
+
+
+  .App {
+    text-align: center;
+    /* background: url(./background-image/car-background.png) fixed center; */
+    background-image: url(./background-image/dark-background-car.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width:1100px) {
   .main {
     display: none;
   }
@@ -59,6 +77,4 @@
   .warnings {
     display: block;
   }
-
-
 }

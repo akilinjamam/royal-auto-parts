@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap'); */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
 
 .theFonts {
-    font-family: 'Yeseva One', cursive;
+    /* font-family: 'Alfa Slab One', cursive; */
+    font-family: 'Goldman', cursive;
 }
 
 .color {
@@ -12,6 +15,10 @@
 
 .size {
     font-size: 50px;
+}
+
+.responsiveDetail {
+    width: 500px
 }
 
 .theButton {
@@ -26,4 +33,49 @@
     background-color: red;
     color: white;
     transition: .5s ease-in-out;
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .forResposive {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .imgResponsive {
+        width: 500px;
+        margin: auto
+    }
+
+    .resBannerTitle p {
+        font-size: 33px;
+    }
+
+    .responsiveDetail p {
+        text-align: center;
+    }
+
+    .responsiveDetail {
+        width: 380px;
+    }
+
+    .resBannerButton {
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

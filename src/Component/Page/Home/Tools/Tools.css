@@ -19,3 +19,47 @@
     background-size: cover;
     height: 100vh;
 }
+
+@media screen and (max-width: 480px) {
+
+    html,
+    body {
+        width: 100%;
+        /* height: 100%; */
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .background-modification {
+        height: auto
+    }
+
+    .background-modification-two {
+        height: auto;
+    }
+
+    .background-modification-three {
+        height: auto;
+    }
+
+    .resPartTreeMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .partOneMarginTopRes {
+        height: 120vh;
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+
+    .partTwoMarginTopRes {
+        height: 120vh;
+
+    }
+
+
+}

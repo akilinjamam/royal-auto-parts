@@ -1,0 +1,26 @@
+.fullReview {
+    display: block;
+}
+
+.resReview {
+    display: none;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .fullReview {
+        display: none;
+    }
+
+    .resReview {
+        display: block;
+    }
+
+    .resRevButton {
+        width: 24%;
+        margin: auto;
+    }
+
+
+}
