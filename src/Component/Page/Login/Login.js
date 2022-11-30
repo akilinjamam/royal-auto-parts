@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useToken from '../../Shared/useToken';
 import loginImage from '../../../background-image/login-img.png'
+import './Login.css'
 
 
 
@@ -73,7 +74,7 @@ const Login = () => {
     return (
 
         <div className='flex justify-center items-center h-screen'>
-            <div data-aos='zoom-in' data-aos-duration='1000'>
+            <div data-aos='zoom-in' data-aos-duration='1000' className='resLoginImg'>
                 <img className='w-3/4' src={loginImage} alt="" />
             </div>
 

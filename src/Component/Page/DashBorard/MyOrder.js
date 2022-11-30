@@ -55,65 +55,126 @@ const MyOrder = () => {
 
 
         <div >
-            <p className='color text-2xl text-left font-bold theFonts'>My Orders</p>
+            <p className='color text-2xl text-left font-bold theFonts OrderTtitle'>My Orders</p>
             <br />
-            {
-                myOrders.map((order, index) =>
+            <div className='OrderMain'>
+                {
+                    myOrders.map((order, index) =>
 
-                    <div className='border-b-2 border-red-600 pb-5 pt-5 mr-7'>
-                        <div className='flex text-left justify-between text-white'>
-                            {/* div one */}
-                            <div style={{ width: '' }}>
-                                <p>Order No: {index + 1}</p>
-                                <p>Name: {order.userName}</p>
-                                <p>Email: {order.userEmail}</p>
-                                <p>Parts Name: {order.partsName}</p>
-                                <p>Address: {order.address} </p>
+                        <div className='border-b-2 border-red-600 pb-5 pt-5 mr-7'>
+                            <div className='flex text-left justify-between text-white resOrderDetail'>
+                                {/* div one */}
+                                <div style={{ width: '' }}>
+                                    <p>Order No: {index + 1}</p>
+                                    <p>Name: {order.userName}</p>
+                                    <p>Email: {order.userEmail}</p>
+                                    <p>Parts Name: {order.partsName}</p>
+                                    <p>Address: {order.address} </p>
+                                </div>
+
+                                {/* div two */}
+                                <div style={{ width: '' }}>
+
+                                    <p>Phone: {order.phone} </p>
+                                    <br />
+                                    <p>Order Quantity: {order.orderQuantity} </p>
+                                    <p>Price Per Unit: {order.pricePerUnit} </p>
+                                    <p>payment Status: {order?.transactionId ? <p>Paid</p> : <p>Not Paid</p>} </p>
+                                </div>
+                                {/* div three */}
+
+                                <div style={{ width: '350px' }}>
+                                    {
+                                        order?.transactionId && <p> Transaction ID: {order.transactionId} </p>
+                                    }
+
+                                    {
+                                        order?.status && <p>Order Status: {order.status} </p>
+                                    }
+                                </div>
+
+
                             </div>
+                            <br />
+                            <div className='flex text-white'>
+                                <div className='text-left'>
+                                    {order?.transactionId ? <button disabled className='btn btn-xs text-white'>Delete Order</button> : <label onClick={() => setDeleteUsers(order)} for="delete-user" class="btn btn-xs" >Delete Order</label>}
 
-                            {/* div two */}
-                            <div style={{ width: '' }}>
+                                    {/* Modal for deleting Order */}
+                                    {
+                                        deleteUsers && <DeleteUser deleteUsers={deleteUsers} setDeleteUsers={setDeleteUsers}></DeleteUser>
+                                    }
+                                </div>
 
-                                <p>Phone: {order.phone} </p>
-                                <br />
-                                <p>Order Quantity: {order.orderQuantity} </p>
-                                <p>Price Per Unit: {order.pricePerUnit} </p>
-                                <p>payment Status: {order?.transactionId ? <p>Paid</p> : <p>Not Paid</p>} </p>
+                                <div className='ml-10'>
+                                    {order?.transactionId ? <p class="btn btn-xs cursor-not-allowed">paid</p> : <Link to={`/dashboard/payment/${order._id}`}><button class="btn btn-xs">payment</button></Link>}
+                                </div>
                             </div>
-                            {/* div three */}
-
-                            <div style={{ width: '350px' }}>
-                                {
-                                    order?.transactionId && <p> Transaction ID: {order.transactionId} </p>
-                                }
-
-                                {
-                                    order?.status && <p>Order Status: {order.status} </p>
-                                }
-                            </div>
-
 
                         </div>
-                        <br />
-                        <div className='flex text-white'>
-                            <div className='text-left'>
-                                {order?.transactionId ? <button disabled className='btn btn-xs text-white'>Delete Order</button> : <label onClick={() => setDeleteUsers(order)} for="delete-user" class="btn btn-xs" >Delete Order</label>}
 
-                                {/* Modal for deleting Order */}
-                                {
-                                    deleteUsers && <DeleteUser deleteUsers={deleteUsers} setDeleteUsers={setDeleteUsers}></DeleteUser>
-                                }
+                    )
+                }
+            </div>
+            {/* for responsiveness */}
+            <div className='resOrder'>
+                <p className='color text-2xl text-left ml-5  font-bold theFonts'>My Orders</p>
+                <div>
+                    {
+                        myOrders.map((order, index) => <div className='border-b-2 border-red-600 pb-5 pt-5 mr-7'>
+                            <div className=' text-white text-left ml-5'>
+                                {/* div one */}
+                                <div style={{ width: '' }}>
+                                    <p>Order No: {index + 1}</p>
+                                    <p>Name: {order.userName}</p>
+                                    <p>Email: {order.userEmail}</p>
+                                    <p>Parts Name: {order.partsName}</p>
+                                    <p>Address: {order.address} </p>
+                                </div>
+
+                                {/* div two */}
+                                <div style={{ width: '' }}>
+
+                                    <p>Phone: {order.phone} </p>
+                                    <br />
+                                    <p>Order Quantity: {order.orderQuantity} </p>
+                                    <p>Price Per Unit: {order.pricePerUnit} </p>
+                                    <p>payment Status: {order?.transactionId ? <p>Paid</p> : <p>Not Paid</p>} </p>
+                                </div>
+                                {/* div three */}
+
+                                <div style={{ width: '350px' }}>
+                                    {
+                                        order?.transactionId && <p> Transaction ID: {order.transactionId} </p>
+                                    }
+
+                                    {
+                                        order?.status && <p>Order Status: {order.status} </p>
+                                    }
+                                </div>
+
+
+                            </div>
+                            <br />
+                            <div className='flex text-white'>
+                                <div className='text-left'>
+                                    {order?.transactionId ? <button disabled className='btn btn-xs text-white'>Delete Order</button> : <label onClick={() => setDeleteUsers(order)} for="delete-user" class="btn btn-xs" >Delete Order</label>}
+
+                                    {/* Modal for deleting Order */}
+                                    {
+                                        deleteUsers && <DeleteUser deleteUsers={deleteUsers} setDeleteUsers={setDeleteUsers}></DeleteUser>
+                                    }
+                                </div>
+
+                                <div className='ml-10'>
+                                    {order?.transactionId ? <p class="btn btn-xs cursor-not-allowed">paid</p> : <Link to={`/dashboard/payment/${order._id}`}><button class="btn btn-xs">payment</button></Link>}
+                                </div>
                             </div>
 
-                            <div className='ml-10'>
-                                {order?.transactionId ? <p class="btn btn-xs cursor-not-allowed">paid</p> : <Link to={`/dashboard/payment/${order._id}`}><button class="btn btn-xs">payment</button></Link>}
-                            </div>
-                        </div>
-
-                    </div>
-
-                )
-            }
+                        </div>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };

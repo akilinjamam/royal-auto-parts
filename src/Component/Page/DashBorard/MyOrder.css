@@ -19,3 +19,22 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
 }
+
+.resOrder {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .OrderTtitle {
+        display: none;
+    }
+
+    .OrderMain {
+        display: none;
+    }
+
+    .resOrder {
+        display: block;
+    }
+}

@@ -1,0 +1,33 @@
+.resDashboard {
+    width: 900px;
+    height: 400px;
+    margin-right: 20px;
+    overflow-y: scroll;
+}
+
+.resDeshboardBar {
+    display: none;
+}
+
+.dashboardBar {
+
+    display: block;
+}
+
+
+@media screen and (max-width:480px) {
+    .resDashboard {
+        width: 400px;
+    }
+
+    .resDeshboardBar {
+        display: flex;
+    }
+
+    .dashboardBar {
+
+        display: none;
+    }
+
+
+}

@@ -9,6 +9,8 @@ import auth from '../../../firebase.init';
 import Loading from '../../Shared/Navbar/Loading/Loading';
 import useToken from '../../Shared/useToken';
 
+import './SignUp.css'
+
 import signup from '../../../background-image/signup-form-img.png'
 
 
@@ -67,7 +69,7 @@ const SignUp = () => {
         <div className='flex justify-center items-center h-screen'>
 
 
-            <div data-aos='zoom-in' data-aos-duration='1000'>
+            <div data-aos='zoom-in' data-aos-duration='1000' className='resSignupImg' >
                 <img className='w-3/4' src={signup} alt="" />
             </div>
 
