@@ -5,7 +5,7 @@ const AdminRow = ({ user, index, refetch }) => {
 
     const makeAdmin = (email, refetch) => {
 
-        fetch(`https://ancient-crag-35082.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://royal-autoparts-re-server-production.up.railway.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')} `

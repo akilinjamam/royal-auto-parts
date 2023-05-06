@@ -30,7 +30,7 @@ const DashBoard = () => {
                         {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/myProfile' >Add My Profile</Link></div>}
 
                         {
-                            user && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/seeProfile' >See My Profile</Link></div>
+                            user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/seeProfile' >See My Profile</Link></div>
                         }
 
                         {/* {admin && <div></div>} */}

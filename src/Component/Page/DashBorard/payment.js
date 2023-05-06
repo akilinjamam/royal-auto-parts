@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L15LfKpSPax7dcfMZ89vfrtxD74FXCoHQxfE
 const Payment = () => {
 
     const { id } = useParams()
-    const url = `https://ancient-crag-35082.herokuapp.com/orders/${id}`
+    const url = `https://royal-autoparts-re-server-production.up.railway.app/orders/${id}`
     const { data: orders, isLoading } = useQuery(['orders', id], () => fetch(url, {
         method: 'GET',
 
@@ -35,10 +35,8 @@ const Payment = () => {
     return (
         <div>
             <br />
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content flex-col ">
-
-
+            <div class="hero  ">
+                <div class="hero-content d-flex ">
                     <div class="card w-full bg-base-100 shadow-xl">
                         <div class="card-body font-bold">
                             <h2 class="card-title"> </h2>
@@ -50,11 +48,8 @@ const Payment = () => {
                             <p >phone: <span className='text-red-900'>{orders.phone}</span> </p>
                             <p>Please Pay Total : {totalOrderPrice} TK </p>
                             <div class="card-actions justify-end">
-
                             </div>
                         </div>
-
-
                     </div>
 
 
@@ -63,10 +58,7 @@ const Payment = () => {
                             <Elements stripe={stripePromise}>
                                 <ChackoutForm orders={orders} />
                             </Elements>
-
                         </div>
-
-
                     </div>
                 </div>
             </div>

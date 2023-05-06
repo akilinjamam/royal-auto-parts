@@ -6,7 +6,7 @@ const useTools = () => {
 
 
     useEffect(() => {
-        const url = 'https://ancient-crag-35082.herokuapp.com/parts';
+        const url = 'https://royal-autoparts-re-server-production.up.railway.app/parts';
         fetch(url, {
             method: 'GET',
             headers: {
@@ -17,6 +17,8 @@ const useTools = () => {
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
+
+
     return [parts]
 };
 

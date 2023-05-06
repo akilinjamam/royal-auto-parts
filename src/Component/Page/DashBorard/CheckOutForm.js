@@ -14,7 +14,7 @@ const ChackoutForm = ({ orders }) => {
     const { _id, pricePerUnit, userName, userEmail } = orders;
 
     useEffect(() => {
-        fetch('https://ancient-crag-35082.herokuapp.com/create-payment-intent', {
+        fetch('https://royal-autoparts-re-server-production.up.railway.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -101,7 +101,7 @@ const ChackoutForm = ({ orders }) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`https://ancient-crag-35082.herokuapp.com/orders/${_id}`, {
+            fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

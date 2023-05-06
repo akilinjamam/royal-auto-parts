@@ -30,7 +30,7 @@ const AddProducts = () => {
 
         // send to server
 
-        fetch('https://ancient-crag-35082.herokuapp.com/parts', {
+        fetch('https://royal-autoparts-re-server-production.up.railway.app/parts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -39,7 +39,6 @@ const AddProducts = () => {
             body: JSON.stringify(parts)
 
         })
-
             .then(res => res.json())
             .then(data => {
                 console.log(data)

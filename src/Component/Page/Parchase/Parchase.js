@@ -32,7 +32,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        const url = `https://ancient-crag-35082.herokuapp.com/parts/${purchaseId}`;
+        const url = `https://royal-autoparts-re-server-production.up.railway.app/parts/${purchaseId}`;
         fetch(url, {
             method: 'GET',
             'authorization': `Bearer ${localStorage.getItem('accessToken')} `
@@ -77,7 +77,7 @@ const Purchase = () => {
 
         // post to server
 
-        fetch('https://ancient-crag-35082.herokuapp.com/orders', {
+        fetch('https://royal-autoparts-re-server-production.up.railway.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

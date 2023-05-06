@@ -12,7 +12,7 @@ const useToken = (user) => {
 
         if (email) {
 
-            fetch(`https://ancient-crag-35082.herokuapp.com/user/${email}`, {
+            fetch(`https://royal-autoparts-re-server-production.up.railway.app/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

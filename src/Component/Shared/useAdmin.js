@@ -11,7 +11,7 @@ const useAdmin = (user) => {
         console.log(email)
         if (email) {
 
-            fetch(`https://ancient-crag-35082.herokuapp.com/admin/${email}`, {
+            fetch(`https://royal-autoparts-re-server-production.up.railway.app/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

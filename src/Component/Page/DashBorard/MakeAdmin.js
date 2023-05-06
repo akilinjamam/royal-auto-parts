@@ -5,7 +5,7 @@ import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
 
-    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('https://ancient-crag-35082.herokuapp.com/user', {
+    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('https://royal-autoparts-re-server-production.up.railway.app/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')} `

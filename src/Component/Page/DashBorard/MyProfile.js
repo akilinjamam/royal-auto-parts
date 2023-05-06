@@ -34,7 +34,7 @@ const MyProfile = () => {
 
 
         const email = user?.email
-        fetch(`https://ancient-crag-35082.herokuapp.com/profile?email=${email}`, {
+        fetch(`https://royal-autoparts-re-server-production.up.railway.app/profile?email=${email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

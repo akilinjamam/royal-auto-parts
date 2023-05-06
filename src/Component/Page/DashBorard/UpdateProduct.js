@@ -35,7 +35,7 @@ const UpdateProduct = () => {
 
 
         // send data to the server:
-        const url = `https://ancient-crag-35082.herokuapp.com/parts/${uId}`
+        const url = `https://royal-autoparts-re-server-production.up.railway.app/parts/${uId}`
         fetch(url, {
             method: 'PUT',
             headers: {

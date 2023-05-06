@@ -21,7 +21,7 @@ const MyOrder = () => {
     useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`, {
+            fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')} `
@@ -42,7 +42,14 @@ const MyOrder = () => {
                     setMyOrders(data)
                 })
         }
-    }, [user])
+    }, [user]);
+
+    const findMyOrders = myOrders?.filter(m => {
+        return m.userEmail === user.email
+    });
+    console.log(findMyOrders);
+
+
 
 
     if (!myOrders) {
@@ -59,14 +66,14 @@ const MyOrder = () => {
             <br />
             <div className='OrderMain'>
                 {
-                    myOrders.map((order, index) =>
+                    findMyOrders.map((order, index) =>
 
                         <div className='border-b-2 border-red-600 pb-5 pt-5 mr-7'>
                             <div className='flex text-left justify-between text-white resOrderDetail'>
                                 {/* div one */}
                                 <div style={{ width: '' }}>
                                     <p>Order No: {index + 1}</p>
-                                    <p>Name: {order.userName}</p>
+                                    <p>Name: {user.displayName}</p>
                                     <p>Email: {order.userEmail}</p>
                                     <p>Parts Name: {order.partsName}</p>
                                     <p>Address: {order.address} </p>
@@ -187,7 +194,7 @@ export default MyOrder;
   useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`)
+            fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
@@ -198,7 +205,7 @@ export default MyOrder;
 
 
 
-     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://ancient-crag-35082.herokuapp.com/orders?userEmail=${email}`, {
+     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

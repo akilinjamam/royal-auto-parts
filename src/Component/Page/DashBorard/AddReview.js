@@ -45,7 +45,7 @@ const AddReview = () => {
             img: user.photoURL,
         }
 
-        fetch('https://ancient-crag-35082.herokuapp.com/reviews', {
+        fetch('https://royal-autoparts-re-server-production.up.railway.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

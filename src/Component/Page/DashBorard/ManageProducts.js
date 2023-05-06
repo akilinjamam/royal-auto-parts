@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [parts, setParts] = useState([])
 
     useEffect(() => {
-        const url = 'https://ancient-crag-35082.herokuapp.com/parts';
+        const url = 'https://royal-autoparts-re-server-production.up.railway.app/parts';
         fetch(url, {
             method: 'GET',
             headers: {

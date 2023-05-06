@@ -10,7 +10,7 @@ const DeleteUser = ({ deleteUsers, setDeleteUsers, refetch }) => {
     // console.log(allOrders)
     const handleDelete = (partsName, id) => {
 
-        fetch(`https://ancient-crag-35082.herokuapp.com/orders/${id}`, {
+        fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
