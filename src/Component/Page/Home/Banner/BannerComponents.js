@@ -27,6 +27,12 @@ const BannerComponents = () => {
                         <div data-aos='fade-right' data-aos-duration='3000' className='resBannerButton'>
                             <button className='theButton '><Link to='/availablePurchase'>View All Available Parts</Link></button>
                         </div>
+                        <br />
+                        <div data-aos='fade-right' data-aos-duration='2000'>
+                            <p className='text-gray-400 theFonts'>Admin Access:</p>
+                            <p className='text-gray-400 theFonts'>Email: bosor@gmail.com</p>
+                            <p className='text-gray-400 theFonts'>Password: 123456</p>
+                        </div>
                     </div>
                 </div>
             </div>
