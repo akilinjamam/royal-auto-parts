@@ -8,11 +8,11 @@ import './Tools.css'
 
 const Tools = () => {
 
-    const [parts] = useTools([])
-
-    const partsSlice = parts.slice(1, 2)
-    const partTwo = parts.slice(2, 3)
-    const partThree = parts.slice(3, 4)
+    const [parts] = useTools()
+    console.log(parts)
+    const partsSlice = parts?.slice(1, 2)
+    const partTwo = parts?.slice(2, 3)
+    const partThree = parts?.slice(3, 4)
 
 
     return (
@@ -29,7 +29,9 @@ const Tools = () => {
 
                 <div className='partOneMarginTopRes' >
                     {
-                        partsSlice.map(p => <Part part={p} key={p._id} ></Part>)
+                        partsSlice?.map(p => {
+                            return <Part part={p} key={p._id} ></Part>
+                        })
 
                     }
                 </div>
@@ -37,13 +39,17 @@ const Tools = () => {
 
             <div className='partTwoMarginTopRes'>
                 {
-                    partTwo.map(p => <PartTwo part={p} key={p._id}></PartTwo>)
+                    partTwo?.map(p => {
+                        return <PartTwo part={p} key={p._id}></PartTwo>
+                    })
                 }
             </div>
 
             <div className='partThreeMarginTopRes'>
                 {
-                    partThree.map(p => <PartThree part={p} key={p._id}></PartThree>)
+                    partThree?.map(p => {
+                        return <PartThree part={p} key={p._id}></PartThree>
+                    })
                 }
             </div>
         </div>
