@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [parts, setParts] = useState([])
 
     useEffect(() => {
-        const url = 'https://royal-autoparts-re-server-production.up.railway.app/parts';
+        const url = 'https://royal-autoparts-re-server.vercel.app/parts';
         fetch(url, {
             method: 'GET',
             headers: {

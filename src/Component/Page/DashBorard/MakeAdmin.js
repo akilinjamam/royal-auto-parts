@@ -5,7 +5,7 @@ import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
 
-    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('https://royal-autoparts-re-server-production.up.railway.app/user', {
+    const { data: user, isLoading, refetch } = useQuery('user', () => fetch('https://royal-autoparts-re-server.vercel.app/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')} `

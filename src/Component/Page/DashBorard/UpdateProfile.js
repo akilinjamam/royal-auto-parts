@@ -28,7 +28,7 @@ const UpdateProfile = () => {
         navigate('dashboard/myProfile')
 
         // send data to the server:
-        const url = `https://royal-autoparts-re-server-production.up.railway.app/profile/${uId}`
+        const url = `https://royal-autoparts-re-server.vercel.app/profile/${uId}`
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -35,7 +35,7 @@ const UpdateProduct = () => {
 
 
         // send data to the server:
-        const url = `https://royal-autoparts-re-server-production.up.railway.app/parts/${uId}`
+        const url = `https://royal-autoparts-re-server.vercel.app/parts/${uId}`
         fetch(url, {
             method: 'PUT',
             headers: {

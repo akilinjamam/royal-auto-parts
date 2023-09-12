@@ -30,7 +30,7 @@ const AddProducts = () => {
 
         // send to server
 
-        fetch('https://royal-autoparts-re-server-production.up.railway.app/parts', {
+        fetch('https://royal-autoparts-re-server.vercel.app/parts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

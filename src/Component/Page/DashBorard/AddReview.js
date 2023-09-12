@@ -45,7 +45,7 @@ const AddReview = () => {
             img: user.photoURL,
         }
 
-        fetch('https://royal-autoparts-re-server-production.up.railway.app/reviews', {
+        fetch('https://royal-autoparts-re-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

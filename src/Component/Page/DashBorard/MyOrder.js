@@ -21,7 +21,7 @@ const MyOrder = () => {
     useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`, {
+            fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')} `
@@ -194,7 +194,7 @@ export default MyOrder;
   useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`)
+            fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
@@ -205,7 +205,7 @@ export default MyOrder;
 
 
 
-     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders?userEmail=${email}`, {
+     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

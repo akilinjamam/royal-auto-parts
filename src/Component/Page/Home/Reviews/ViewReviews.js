@@ -8,7 +8,7 @@ import stars from '../../../../background-image/star.png'
 
 const ViewReviews = () => {
 
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://royal-autoparts-re-server-production.up.railway.app/reviews', {
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://royal-autoparts-re-server.vercel.app/reviews', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

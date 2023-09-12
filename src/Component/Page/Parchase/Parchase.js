@@ -32,7 +32,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        const url = `https://royal-autoparts-re-server-production.up.railway.app/parts/${purchaseId}`;
+        const url = `https://royal-autoparts-re-server.vercel.app/parts/${purchaseId}`;
         fetch(url, {
             method: 'GET',
             'authorization': `Bearer ${localStorage.getItem('accessToken')} `
@@ -77,7 +77,7 @@ const Purchase = () => {
 
         // post to server
 
-        fetch('https://royal-autoparts-re-server-production.up.railway.app/orders', {
+        fetch('https://royal-autoparts-re-server.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

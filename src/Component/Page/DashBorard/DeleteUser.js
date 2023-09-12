@@ -10,7 +10,7 @@ const DeleteUser = ({ deleteUsers, setDeleteUsers, refetch }) => {
     // console.log(allOrders)
     const handleDelete = (partsName, id) => {
 
-        fetch(`https://royal-autoparts-re-server-production.up.railway.app/orders/${id}`, {
+        fetch(`https://royal-autoparts-re-server.vercel.app/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

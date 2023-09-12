@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L15LfKpSPax7dcfMZ89vfrtxD74FXCoHQxfE
 const Payment = () => {
 
     const { id } = useParams()
-    const url = `https://royal-autoparts-re-server-production.up.railway.app/orders/${id}`
+    const url = `https://royal-autoparts-re-server.vercel.app/orders/${id}`
     const { data: orders, isLoading } = useQuery(['orders', id], () => fetch(url, {
         method: 'GET',
 

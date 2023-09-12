@@ -12,7 +12,7 @@ const SeeProfile = () => {
 
     const [user] = useAuthState(auth)
 
-    const { data: profile, isLoading } = useQuery('profile', () => fetch('https://royal-autoparts-re-server-production.up.railway.app/profile', {
+    const { data: profile, isLoading } = useQuery('profile', () => fetch('https://royal-autoparts-re-server.vercel.app/profile', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

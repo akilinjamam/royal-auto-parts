@@ -16,7 +16,7 @@ const AvaiablePurchase = () => {
 
     console.log(parts)
     useEffect(() => {
-        const url = 'https://royal-autoparts-re-server-production.up.railway.app/parts';
+        const url = 'https://royal-autoparts-re-server.vercel.app/parts';
         fetch(url, {
             method: 'GET',
             headers: {
@@ -34,7 +34,6 @@ const AvaiablePurchase = () => {
     }
 
     const handlePurchase = (id) => {
-
         navigate(`/purchase/${id}`)
     }
 
