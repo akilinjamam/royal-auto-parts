@@ -1,13 +1,14 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import useAdmin from '../../Shared/useAdmin';
 import './Dashboard.css'
+import { useEffect } from 'react';
 
 const DashBoard = () => {
     const [user] = useAuthState(auth)
-    const [admin] = useAdmin(user)
+    const [admin] = useAdmin(user);
 
     console.log(admin)
     return (
@@ -17,12 +18,12 @@ const DashBoard = () => {
             {/* for responsiveness */}
 
 
-            <div className='flex justify-between '>
+            <div style={{ width: '100%' }} className='flex justify-between '>
 
-                <div data-aos='fade-right' data-aos-duration='800' style={{ width: '260px', height: '480px', borderRight: '1px solid red', borderTop: '1px solid red', borderBottom: '1px solid red', marginTop: '50px', borderRadius: '0px 10px 10px 0px' }} className='dashboardBar' >
+                <div style={{ width: '15%', height: '480px', borderRight: '1px solid red', borderTop: '1px solid red', borderBottom: '1px solid red', marginTop: '50px', borderRadius: '0px 10px 10px 0px' }} className='dashboardBar' >
 
                     <div className='ml-5 mt-16 '>
-                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600 ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard' >My Order</Link></div>}
+                        {user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600 ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/myOrder' >My Order</Link></div>}
                         {
                             user && !admin && <div className=' p-3 hover:border-l-2 hover:border-red-600  ' style={{ color: 'red', marginBottom: '15px', textAlign: 'left' }}><Link to='/dashboard/addReview' >Add Review</Link></div>
                         }
@@ -51,7 +52,7 @@ const DashBoard = () => {
 
 
 
-                <div>
+                <div style={{ width: '75%' }}>
                     <br />
                     <h2 className='text-4xl font-bold text-blue-600  '>Dashboard</h2>
                     <br /> <br />

@@ -34,7 +34,7 @@ const MyProfile = () => {
 
 
         const email = user?.email
-        fetch(`https://royal-autoparts-re-server.vercel.app/profile?email=${email}`, {
+        fetch(`https://royal-autoparts-re-server.onrender.com/profile?email=${email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -9,8 +9,9 @@ import Loading from '../../Shared/Navbar/Loading/Loading';
 
 import DeleteUser from './DeleteUser';
 
+
 const MyOrder = () => {
-    const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth);
     const [deleteUsers, setDeleteUsers] = useState(null)
     const navigate = useNavigate()
     const [myOrders, setMyOrders] = useState([])
@@ -21,7 +22,7 @@ const MyOrder = () => {
     useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`, {
+            fetch(`https://royal-autoparts-re-server.onrender.com/orders?userEmail=${email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')} `
@@ -42,7 +43,7 @@ const MyOrder = () => {
                     setMyOrders(data)
                 })
         }
-    }, [user]);
+    }, [user, navigate]);
 
     const findMyOrders = myOrders?.filter(m => {
         return m.userEmail === user.email
@@ -55,6 +56,8 @@ const MyOrder = () => {
     if (!myOrders) {
         return <Loading></Loading>
     }
+
+
 
 
 
@@ -194,7 +197,7 @@ export default MyOrder;
   useEffect(() => {
         if (user) {
             const email = user?.email
-            fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`)
+            fetch(`https://royal-autoparts-re-server.onrender.com/orders?userEmail=${email}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data)
@@ -205,7 +208,7 @@ export default MyOrder;
 
 
 
-     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://royal-autoparts-re-server.vercel.app/orders?userEmail=${email}`, {
+     const { data: myOrders, isLoading, refetch } = useQuery('myOrders', () => fetch(`https://royal-autoparts-re-server.onrender.com/orders?userEmail=${email}`, {
         method: 'GET',
         headers: {
             'content-type': 'application/json',

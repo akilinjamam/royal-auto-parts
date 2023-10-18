@@ -14,7 +14,7 @@ const ChackoutForm = ({ orders }) => {
     const { _id, pricePerUnit, userName, userEmail } = orders;
 
     useEffect(() => {
-        fetch('https://royal-autoparts-re-server.vercel.app/create-payment-intent', {
+        fetch('https://royal-autoparts-re-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -101,7 +101,7 @@ const ChackoutForm = ({ orders }) => {
                 transactionId: paymentIntent.id
             }
 
-            fetch(`https://royal-autoparts-re-server.vercel.app/orders/${_id}`, {
+            fetch(`https://royal-autoparts-re-server.onrender.com/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

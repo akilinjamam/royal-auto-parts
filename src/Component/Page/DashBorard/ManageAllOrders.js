@@ -8,7 +8,7 @@ const ManageAllOrders = () => {
 
     // const [allOrders, setAllOrders] = useState([])
 
-    const { data: allOrders, isLoading, refetch } = useQuery('orders', () => fetch('https://royal-autoparts-re-server.vercel.app/orders', {
+    const { data: allOrders, isLoading, refetch } = useQuery('orders', () => fetch('https://royal-autoparts-re-server.onrender.com/orders', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')} `
@@ -34,7 +34,7 @@ const ManageAllOrders = () => {
         }
 
         // send data to the server:
-        const url = `https://royal-autoparts-re-server.vercel.app/orders/${id}`
+        const url = `https://royal-autoparts-re-server.onrender.com/orders/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {

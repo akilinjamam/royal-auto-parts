@@ -16,7 +16,7 @@ const AvaiablePurchase = () => {
 
     console.log(parts)
     useEffect(() => {
-        const url = 'https://royal-autoparts-re-server.vercel.app/parts';
+        const url = 'https://royal-autoparts-re-server.onrender.com/parts';
         fetch(url, {
             method: 'GET',
             headers: {

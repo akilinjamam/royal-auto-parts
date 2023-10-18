@@ -30,6 +30,7 @@ import background from './background-image/car-background.png'
 import AvaiablePurchase from './Component/Page/Parchase/AvaiablePurchase';
 import ViewReviews from './Component/Page/Home/Reviews/ViewReviews';
 import Warning from './Warnings/Warning';
+import DashIndex from './Component/Page/DashBorard/DashIndex';
 
 function App() {
   return (
@@ -50,7 +51,8 @@ function App() {
           <Route path='/signup' element={<SignUp></SignUp>} ></Route>
           <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>} >
             <Route path='addReview' element={<AddReview></AddReview>}></Route>
-            <Route index element={<MyOrder></MyOrder>}></Route>
+            <Route index element={<DashIndex></DashIndex>}></Route>
+            <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
             <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
             <Route path='payment/:id' element={<Payment></Payment>}></Route>
             <Route path='seeProfile' element={<SeeProfile></SeeProfile>}></Route>

@@ -5,7 +5,7 @@ const AdminRow = ({ user, index, refetch }) => {
 
     const makeAdmin = (email, refetch) => {
 
-        fetch(`https://royal-autoparts-re-server.vercel.app/user/admin/${email}`, {
+        fetch(`https://royal-autoparts-re-server.onrender.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')} `

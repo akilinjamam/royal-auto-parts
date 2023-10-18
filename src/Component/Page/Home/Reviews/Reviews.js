@@ -17,7 +17,7 @@ const Reviews = () => {
 
     // console.log(user)
 
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://royal-autoparts-re-server.vercel.app/reviews', {
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://royal-autoparts-re-server.onrender.com/reviews', {
         method: 'GET',
         headers: {
             'content-type': 'application/json',
@@ -30,7 +30,7 @@ const Reviews = () => {
     }
 
 
-    const slicedReviews = reviews.slice(0, 4)
+    const slicedReviews = reviews?.slice(0, 4)
 
     const starOne = <div>
         <img style={{ width: '15px' }} src={stars} alt="" />
@@ -75,7 +75,7 @@ const Reviews = () => {
                 <div className='fullReview' >
                     {/* className='grid lg:grid-cols-3 sm:grid-cols-1 gap-10' */}
                     {
-                        slicedReviews.map(review => <div key={review._id} data-aos='flip-up' data-aos-duration='600' className='m-16 border border-red-700 rounded-lg p-3 w-2/3 mx-auto flex items-center' >
+                        slicedReviews?.map(review => <div key={review._id} data-aos='flip-up' data-aos-duration='600' className='m-16 border border-red-700 rounded-lg p-3 w-2/3 mx-auto flex items-center' >
                             {/* style={{ width: '90px' }} */}
                             {/*  */}
                             <div data-aos='zoom-in' data-aos-duration='1000' className='resRevImg' >
@@ -107,7 +107,7 @@ const Reviews = () => {
 
                 <div className='resReview'>
                     {
-                        slicedReviews.map(review =>
+                        slicedReviews?.map(review =>
                             <div style={{ width: '70%', margin: 'auto', border: '1px solid red', padding: '10px', marginBottom: '20px', borderRadius: '10px', color: 'white' }}>
 
                                 <div >

@@ -12,7 +12,7 @@ const useToken = (user) => {
 
         if (email) {
 
-            fetch(`https://royal-autoparts-re-server.vercel.app/user/${email}`, {
+            fetch(`https://royal-autoparts-re-server.onrender.com/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
