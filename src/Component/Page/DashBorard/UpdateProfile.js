@@ -6,15 +6,10 @@ import useTools from '../../Shared/useTools';
 const UpdateProfile = () => {
 
     const { uId } = useParams()
-    const navigate = useNavigate()
-
-
 
     const [education, setEducation] = useState('');
     const [location, setLocation] = useState('');
     const [linkdin, setLinkDin] = useState('');
-
-
 
     const [profile, setProfile] = useState([])
 
@@ -28,6 +23,10 @@ const UpdateProfile = () => {
         }
 
 
+
+
+
+
         // send data to the server:
         const url = `https://royal-autoparts-re-server.onrender.com/profile/${uId}`
         fetch(url, {
@@ -38,11 +37,11 @@ const UpdateProfile = () => {
             body: JSON.stringify(updateProfileData)
         })
             .then(res => {
-                console.log(res)
+
                 return res.json()
             })
             .then(data => {
-                console.log(data)
+
 
                 if (data) {
                     toast.success('updated successfully');
@@ -69,14 +68,11 @@ const UpdateProfile = () => {
     return (
         <div>
             <div className='text-left'>
-
-
                 <h2 className='color font-bold text-2xl text-left theFonts'>Update profile </h2>
                 <br />
                 <p className='text-red-400 pb-3 border-b-2 border-red-400 mr-4'>Profile ID : {uId}</p><br />
 
                 <form onSubmit={updateProfile} action="">
-
                     <textarea
                         style={{ background: "none", color: 'white', border: "1px solid gray", borderRadius: "10px", padding: '7px', width: '300px' }}
                         type="text"
@@ -104,8 +100,6 @@ const UpdateProfile = () => {
                     /><br /><br />
 
                     <input className='theButton' type="submit" value="Update" />
-
-
                 </form>
             </div>
         </div>
