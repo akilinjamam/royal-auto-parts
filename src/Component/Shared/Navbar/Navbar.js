@@ -29,7 +29,7 @@ const Navbar = () => {
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ">
                             <li className='hover:text-red-700'><Link to='/availablePurchase'>Available Parts</Link></li>
                             <li className='hover:text-red-700'><Link to='/viewReviews'>All Reviews</Link></li>
-                            <li><Link to='/blog'>Blogs</Link></li>
+                            {/* <li><Link to='/blog'>Blogs</Link></li> */}
                             <li><Link to='/myPortfolio'>My Portfolio</Link></li>
 
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                         <li className='hover:text-red-700'><Link to='/availablePurchase'>Available Parts</Link></li>
                         <li className='hover:text-red-700'><Link to='/viewReviews'>All Reviews</Link></li>
                         {/* <li className='hover:text-red-700'><Link to='/myPortfolio'>My Portfolio</Link></li> */}
-                        <li className='hover:text-red-700'><Link to='/blog'>Blogs</Link></li>
+                        {/* <li className='hover:text-red-700'><Link to='/blog'>Blogs</Link></li> */}
 
                         {
                             user && <li className='hover:text-red-700'><Link to='/dashboard'>Dashboard</Link></li>

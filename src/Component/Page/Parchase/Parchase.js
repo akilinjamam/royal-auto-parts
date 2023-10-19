@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Navbar/Loading/Loading';
@@ -8,17 +8,12 @@ import '../../Shared/Navbar/Navbar.css';
 import './parchase.css'
 
 const Purchase = () => {
-
+    const navigate = useNavigate();
     const [newQuantity, setNewQuantity] = useState('')
-
-    console.log(parseInt(newQuantity))
-
     const newparsedQuantity = parseInt(newQuantity)
 
     const { purchaseId } = useParams()
-
     const [user] = useAuthState(auth)
-
     const [purchase, setPurchase] = useState([]);
 
 
@@ -91,7 +86,8 @@ const Purchase = () => {
             .then(data => {
                 console.log(data)
                 if (data.insertedId) {
-                    toast.success(' Order Placed success')
+                    toast.success(' Order Placed success');
+                    navigate('/dashboard')
                 }
             })
 

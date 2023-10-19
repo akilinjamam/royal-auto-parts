@@ -1,25 +1,21 @@
 import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 
 const useTools = () => {
 
-    const [parts, setParts] = useState([])
+    // const [parts, setParts] = useState([])
+    const { data: parts, isLoading } = useQuery("parts", () => fetch('https://royal-autoparts-re-server.onrender.com/parts', {
+        method: 'GET',
+        headers: {
+            'content-type': 'application/json',
+
+        }
+    }).then(res => res.json()));
+
+    console.log(parts);
 
 
-    useEffect(() => {
-        const url = 'https://royal-autoparts-re-server.onrender.com/parts';
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/json'
-            }
-
-        })
-            .then(res => res.json())
-            .then(data => setParts(data))
-    }, [])
-
-
-    return [parts]
+    return [parts, isLoading]
 };
 
 export default useTools;

@@ -16,7 +16,7 @@ const BusinessSummery = () => {
             <div className='background-modification-three'>
                 <div className='w-5/6 mx-auto '>
                     <br /><br />
-                    <div data-aos='fade-up' data-aos-duration='1000'>
+                    <div>
                         <h2 className='text-4xl font-bold color theFonts '>Business Summery</h2>
                     </div>
 
@@ -24,43 +24,43 @@ const BusinessSummery = () => {
 
                         <div className='lg:grid grid-cols-5  sm:grid-cols'>
 
-                            <div data-aos='zoom-in' data-aos-duration='1000' >
+                            <div >
                                 <img style={{ width: '100px' }} className='m-16' src={customer} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'> <span> {counterStart && <CountUp start={200} end={460} duration={3} delay={0} />}</span>+ Customers </p>
                             </div>
-                            <div data-aos='zoom-in' data-aos-duration='1500' >
+                            <div >
 
                                 <img style={{ width: '100px' }} className='m-16' src={reveneue} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'><p> <span> {counterStart && <CountUp start={150} end={120} duration={3} delay={0} />}</span>M+</p>Reveneue</p>
                             </div>
-                            <div data-aos='zoom-in' data-aos-duration='1200' >
+                            <div >
 
                                 <img style={{ width: '100px' }} className='m-16' src={reviews} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500'> <p><span> {counterStart && <CountUp start={25} end={49} duration={3} delay={0} />}</span>K</p>  Reviews </p>
                             </div>
-                            <div data-aos='zoom-in' data-aos-duration='2500' >
+                            <div >
 
                                 <img style={{ width: '100px' }} className='m-16' src={employees} alt="" />
 
                                 <p className='text-3xl  font-bold text-yellow-500' ><span> {counterStart && <CountUp start={100} end={220} duration={3} delay={0} />}</span>+  Employees</p>
                             </div>
-                            <div data-aos='zoom-in' data-aos-duration='3000'>
+                            <div>
 
                                 <img style={{ width: '100px' }} className='m-16' src={parts} alt="" />
                                 <p className='text-3xl  font-bold text-yellow-500' ><p> <span> {counterStart && <CountUp start={20} end={80} duration={3} delay={0} />}</span>+</p>Car Parts</p>
                             </div>
                         </div>
                         <br /><br />
-                        <div data-aos='flip-up' data-aos-duration='500' className='flex justify-between w-2/3 mx-auto border border-red-600  p-10 drop-shadow-xl rounded-lg'>
-                            <div data-aos='fade-up' data-aos-duration='1000' className='text-left '>
+                        <div className='flex justify-between w-2/3 mx-auto border border-red-600  p-10 drop-shadow-xl rounded-lg'>
+                            <div className='text-left '>
                                 <p className='text-xl  text-blue-300'>Dont feel hesitate to ask your Desired Question</p>
 
                             </div>
 
-                            <div data-aos='zoom-in' data-aos-duration='1500'>
+                            <div>
                                 <button className='btn btn-primary text-white font-bold'>Contact us</button>
                             </div>
 
@@ -73,14 +73,14 @@ const BusinessSummery = () => {
                     <div className='businessSummeryRes'>
                         <div>
                             <br /><br />
-                            <div data-aos='zoom-in' data-aos-duration='1000' >
+                            <div >
                                 <img style={{ width: '100px', margin: 'auto' }} className='m-16' src={customer} alt="" />
                                 <br />
                                 <p className='text-3xl  font-bold text-yellow-500'> <span> {counterStart && <CountUp start={200} end={460} duration={3} delay={0} />}+</span></p>
                                 <p className='text-3xl  font-bold text-yellow-500'>Customers</p>
                             </div>
                             <br />
-                            <div data-aos='zoom-in' data-aos-duration='1500' >
+                            <div >
 
                                 <img style={{ width: '100px', margin: 'auto' }} className='m-16' src={reveneue} alt="" />
                                 <br />
@@ -90,7 +90,7 @@ const BusinessSummery = () => {
                                 <p className='text-3xl  font-bold text-yellow-500' >Reveneue</p>
                             </div>
                             <br /><br />
-                            <div data-aos='zoom-in' data-aos-duration='1200' >
+                            <div >
 
                                 <img style={{ width: '100px', margin: 'auto' }} className='m-16' src={reviews} alt="" />
                                 <br />
@@ -98,7 +98,7 @@ const BusinessSummery = () => {
                                 <p className='text-3xl  font-bold text-yellow-500'>Reviews</p>
                             </div>
                             <br /><br />
-                            <div data-aos='zoom-in' data-aos-duration='2500' >
+                            <div >
 
                                 <img style={{ width: '100px', margin: 'auto' }} className='m-16' src={employees} alt="" />
                                 <br />
@@ -106,7 +106,7 @@ const BusinessSummery = () => {
                                 <p className='text-3xl  font-bold text-yellow-500'>Employees</p>
                             </div>
                             <br /><br />
-                            <div data-aos='zoom-in' data-aos-duration='3000'>
+                            <div>
 
                                 <img style={{ width: '100px', margin: 'auto' }} className='m-16' src={parts} alt="" />
                                 <br />
@@ -117,13 +117,13 @@ const BusinessSummery = () => {
                         </div>
 
 
-                        <div data-aos='flip-up' data-aos-duration='500' className=' border border-red-600  p-10  rounded-lg questionPart '>
-                            <div data-aos='fade-up' data-aos-duration='1000' className=''>
+                        <div className=' border border-red-600  p-10  rounded-lg questionPart '>
+                            <div className=''>
                                 <p className='text-xl  text-blue-300'>Dont feel hesitate to ask your Desired Question</p>
 
                             </div>
                             <br />
-                            <div data-aos='zoom-in' data-aos-duration='1500'>
+                            <div>
                                 <button className='btn btn-primary text-white font-bold'>Contact us</button>
                             </div>
 

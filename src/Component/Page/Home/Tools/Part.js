@@ -16,31 +16,34 @@ const Part = ({ part }) => {
         navigate(`/purchase/${id}`)
 
     }
+
+
+
     return (
 
         <div style={{ height: '100vh' }} className='flex justify-center items-center'>
 
             <div className='flex w-5/6 mx-auto justify-between resParts  items-center'  >
-                <div data-aos='zoom-in' data-aos-duration='1000' className='image-part resPartsImg'>
+                <div className='image-part resPartsImg'>
                     <img src={img} />
                 </div>
 
                 <div className='detail-part resPartsDetails'>
-                    <div data-aos='fade-up' data-aos-duration='1200'>
+                    <div  >
                         <p>{name} </p>
                     </div>
                     <br />
-                    <div data-aos='fade-up' data-aos-duration='1400'>
+                    <div  >
                         <p>{description}</p>
                     </div>
                     <br />
-                    <div data-aos='fade-up' data-aos-duration='1600'>
+                    <div  >
                         <p>Minimum Order: {minOrderQuantity} </p>
                         <p>Available: {availableQuantity} </p>
                         <p>Price: {pricePerUnit} </p>
                     </div>
                     <br />
-                    <div data-aos='fade-left' data-aos-duration='1700' >
+                    <div   >
                         <button onClick={() => handlePurchase(_id)} className="theButton ">Purchase</button>
                     </div>
                 </div>

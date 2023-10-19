@@ -3,32 +3,33 @@ import './AvailablePurchase.css'
 import Loading from '../../Shared/Navbar/Loading/Loading';
 import { useNavigate } from 'react-router-dom';
 import './parchase.css'
+import useTools from '../../Shared/useTools';
 
 const AvaiablePurchase = () => {
 
-    const [parts, setParts] = useState([])
+    // const [parts, setParts] = useState([])
 
     const navigate = useNavigate()
+    const [parts, isLoading] = useTools()
 
 
 
 
+    // console.log(parts)
+    // useEffect(() => {
+    //     const url = 'https://royal-autoparts-re-server.onrender.com/parts';
+    //     fetch(url, {
+    //         method: 'GET',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         }
 
-    console.log(parts)
-    useEffect(() => {
-        const url = 'https://royal-autoparts-re-server.onrender.com/parts';
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/json'
-            }
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => setParts(data))
+    // }, [])
 
-        })
-            .then(res => res.json())
-            .then(data => setParts(data))
-    }, [])
-
-    if (!parts) {
+    if (isLoading) {
         return <Loading></Loading>
 
     }
@@ -51,11 +52,11 @@ const AvaiablePurchase = () => {
 
                     <div data-aos='flip-up' data-aos-duration='700' className='flex justify-between  border p-5 mb-10 border-red-600 rounded resAvailableparts '>
 
-                        <div data-aos='zoom-in' data-aos-duration='1000' >
+                        <div >
                             <img style={{ width: '290px', borderRadius: '10px' }} src={p.img} alt="" className='resAvailableImg' />
                         </div>
 
-                        <div data-aos='fade-left' data-aos-duration='1500' style={{ width: '600px', textAlign: 'left', color: 'gray' }}>
+                        <div style={{ width: '600px', textAlign: 'left', color: 'gray' }}>
                             <p>{p.name}</p>
                             <br />
                             <p>{p.description}</p>

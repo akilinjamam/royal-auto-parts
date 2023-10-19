@@ -6,6 +6,10 @@
     display: block;
 }
 
+.img_main:hover{
+    transform: scale(3)
+}
+
 
 @media screen and (max-width: 480px) {
 
