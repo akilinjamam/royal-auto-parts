@@ -25,9 +25,8 @@ const Home = () => {
 
 
     return (
-        <div >
-
-            <Particles
+        <div style={{ width: '100%', height: 'auto' }} >
+            {/* <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -103,7 +102,7 @@ const Home = () => {
                     },
                     detectRetina: true,
                 }}
-            />
+            /> */}
             {/* <Banner></Banner> */}
             <BannerComponents></BannerComponents>
             <Tools></Tools>

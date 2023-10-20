@@ -1,20 +1,70 @@
-.fullReview {
-    display: block;
+.review{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
 }
 
-.resReview {
-    display: none;
+
+.seeReviews{
+    width: 40%;
+    height: 500px;
+    background-color: rgba(49, 48, 48, 0.5);
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
+.reviewContainer{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.giveReviews{
+    width: 40%;
+    height: 500px;
+    background-color: rgba(49, 48, 48, 0.5);
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+.reviewImg{
+    width: 20%;
+    margin: auto;
+}
+.reviewDetail{
+    width: 80%;
+}
+.reviewInput{
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: white;
+}
 
 @media screen and (max-width:500px) {
 
-    .fullReview {
-        display: none;
+    .review{
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    .resReview {
-        display: block;
+    .seeReviews{
+        width: 100%;
+        margin-bottom: 50px;
+        
+    }
+
+    .giveReviews{
+        display: none;
+    
     }
 
     .resRevButton {
