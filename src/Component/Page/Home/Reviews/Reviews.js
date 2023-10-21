@@ -17,6 +17,8 @@ import { toast } from 'react-toastify';
 const Reviews = () => {
     const [user] = useAuthState(auth);
     const [ratingNo, setRatingNo] = useState(0);
+    // const [firstRating, setFirstRating] = useState(false);
+
     const { data: reviews, isLoading, refetch } = useQuery('reviews', () => fetch('https://royal-autoparts-re-server.onrender.com/reviews', {
         method: 'GET',
         headers: {
@@ -60,10 +62,19 @@ const Reviews = () => {
     </div>
 
     const handleSetRating = (rate) => {
-        setRatingNo(rate)
+        setRatingNo(rate);
+
+        // if (firstRating === true && rate === 1) {
+        //     setFirstRating(false);
+        //     setRatingNo(0)
+        // } else {
+        //     setFirstRating(true)
+        // }
     }
 
+
     const submitReview = (e) => {
+        console.log(ratingNo)
         e.preventDefault();
         const description = e.target.description.value;
         const stringifiedRating = ratingNo.toString();
@@ -73,8 +84,6 @@ const Reviews = () => {
             name: user?.displayName,
             img: user?.photoURL
         }
-
-        console.log(bodyData)
 
         if (ratingNo && description && user?.displayName) {
             fetch('https://royal-autoparts-re-server.onrender.com/reviews', {
@@ -108,7 +117,6 @@ const Reviews = () => {
                 <br /><br />
                 <h2 className='text-4xl font-bold color theFonts'>All Reviews</h2>
                 <br /><br />
-
                 <div className="review">
                     <div className="seeReviews">
                         {
@@ -163,15 +171,18 @@ const Reviews = () => {
                                 <label htmlFor="">GIVE RATING :</label>
                                 <span className='text-yellow-400 ml-4'  >
                                     {
-                                        (ratingNo === 1
-                                            ||
-                                            ratingNo === 2
-                                            ||
-                                            ratingNo === 3
-                                            ||
-                                            ratingNo === 4
-                                            ||
-                                            ratingNo === 5
+                                        (
+                                            (ratingNo === 1
+                                                ||
+                                                ratingNo === 2
+                                                ||
+                                                ratingNo === 3
+                                                ||
+                                                ratingNo === 4
+                                                ||
+                                                ratingNo === 5)
+                                            // &&
+                                            // firstRating === true
                                         )
                                             ?
                                             <span onClick={() => handleSetRating(1)} ><i class="uis uis-star"></i></span>
@@ -241,10 +252,8 @@ const Reviews = () => {
                             </form>
                         </div>
                     </div>
-
                 </div>
                 <br /><br />
-
                 {
                     reviews.length === 0 && <img className='lg:w-1/2 mx-auto' src={noReviews} alt="" />
                 }
@@ -259,25 +268,3 @@ const Reviews = () => {
 
 export default Reviews;
 
-
-
-/* 
-
- <div class="card w-96 bg-purple-700 text-primary-content text-left ">
-
-
-                            <div style={{ zIndex: '5' }} class="card w-96 bg-base-100 shadow-xl image-full">
-                                <figure><img src={review.img === null ? defultImage : review.img} alt="Shoes" /></figure>
-                                <div class="card-body">
-
-                                    <h2 class="card-title text-white">{review.description}</h2>
-                                    <p className='text-green-400 text-xl font-bold'>{review.name}</p>
-                                    <p className='text-white'>Ratings: <span className='text-yellow-300 font-bold'>{review.rating}</span> </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-*/
