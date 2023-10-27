@@ -49,7 +49,12 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <Link to='/home'>  <span className='img-control'><img style={{ width: '45px', display: 'inline', marginLeft: '20px' }} src={logo} alt="" /></span>  <a className="btn btn-ghost normal-case text-xl text-white  theText ">Royal Auto Parts</a> </Link>
+                    <Link to='/home'>
+                        <span className='img-control'>
+                            <img className='spin_container' style={{ width: '45px', display: 'inline', marginLeft: '20px' }} src={logo} alt="" />
+                        </span>
+                        <a className="btn btn-ghost normal-case text-xl text-white  theText ">Royal Auto Parts</a>
+                    </Link>
                 </div>
                 <div style={{ width: '800px' }} className="navbar-center hidden lg:flex navbar-end">
                     <ul className="menu menu-horizontal p-0 text-white  ">
