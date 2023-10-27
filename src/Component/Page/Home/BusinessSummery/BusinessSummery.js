@@ -25,32 +25,52 @@ const BusinessSummery = () => {
                         <div className='lg:grid grid-cols-5  sm:grid-cols'>
 
                             <div >
-                                <img style={{ width: '100px' }} className='m-16' src={customer} alt="" />
-
-                                <p className='text-3xl  font-bold text-yellow-500'> <span> {counterStart && <CountUp start={200} end={460} duration={3} delay={0} />}</span>+ Customers </p>
+                                <div >
+                                    <img style={{ width: '50%', margin: 'auto', marginTop: '50px' }} src={customer} alt="" />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='text-2xl font-bold text-yellow-500'>{counterStart && <CountUp start={200} end={460} duration={3} delay={0} />}+ Customers</span>
+                                </div>
                             </div>
                             <div >
 
-                                <img style={{ width: '100px' }} className='m-16' src={reveneue} alt="" />
-
-                                <p className='text-3xl  font-bold text-yellow-500'><p> <span> {counterStart && <CountUp start={150} end={120} duration={3} delay={0} />}</span>M+</p>Reveneue</p>
+                                <div >
+                                    <img style={{ width: '50%', margin: 'auto', marginTop: '50px' }} src={reveneue} alt="" />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='text-2xl font-bold text-yellow-500'>{counterStart && <CountUp start={150} end={120} duration={3} delay={0} />}+ Reveneue</span>
+                                </div>
                             </div>
                             <div >
 
-                                <img style={{ width: '100px' }} className='m-16' src={reviews} alt="" />
-
-                                <p className='text-3xl  font-bold text-yellow-500'> <p><span> {counterStart && <CountUp start={25} end={49} duration={3} delay={0} />}</span>K</p>  Reviews </p>
+                                <div >
+                                    <img style={{ width: '50%', margin: 'auto', marginTop: '50px' }} src={reviews} alt="" />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='text-2xl font-bold text-yellow-500'>{counterStart && <CountUp start={25} end={49} duration={3} delay={0} />}K+ Reviews</span>
+                                </div>
                             </div>
                             <div >
 
-                                <img style={{ width: '100px' }} className='m-16' src={employees} alt="" />
-
-                                <p className='text-3xl  font-bold text-yellow-500' ><span> {counterStart && <CountUp start={100} end={220} duration={3} delay={0} />}</span>+  Employees</p>
+                                <div >
+                                    <img style={{ width: '50%', margin: 'auto', marginTop: '50px' }} src={employees} alt="" />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='text-2xl font-bold text-yellow-500'>{counterStart && <CountUp start={100} end={220} duration={3} delay={0} />}+ Employees</span>
+                                </div>
                             </div>
                             <div>
-
-                                <img style={{ width: '100px' }} className='m-16' src={parts} alt="" />
-                                <p className='text-3xl  font-bold text-yellow-500' ><p> <span> {counterStart && <CountUp start={20} end={80} duration={3} delay={0} />}</span>+</p>Car Parts</p>
+                                <div >
+                                    <img style={{ width: '50%', margin: 'auto', marginTop: '50px' }} src={parts} alt="" />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='text-2xl font-bold text-yellow-500'>{counterStart && <CountUp start={20} end={80} duration={3} delay={0} />}+ Car Parts</span>
+                                </div>
                             </div>
                         </div>
                         <br /><br />
